@@ -1,4 +1,4 @@
-baseURL = 'http://kcp-dev.github.io/'
+baseURL = 'https://avinal.space/kcp-dev.github.io/'
 contentDir = "content/en"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
@@ -34,7 +34,7 @@ id = "UA-00000000-0"
 
 [languages]
 [languages.en]
-title = 'kcp – a Kubernetes-like multi-tenant control plane'
+title = 'kcp'
 description = "kcp documentation"
 languageName ="English"
 weight = 1
@@ -116,18 +116,18 @@ disable = false
 path = "github.com/google/docsy/dependencies"
 disable = false
 
-[menu]
+# [menu]
+# # [[menu.main]]
+# # name = "Blog"
+# # weight = -100
+# # pre = "<i class='fas fa-rss pr-2'></i>"
+# # url = "https://blog.kubeflow.org/"
 # [[menu.main]]
-# name = "Blog"
-# weight = -100
-# pre = "<i class='fas fa-rss pr-2'></i>"
-# url = "https://blog.kubeflow.org/"
-[[menu.main]]
-name = "GitHub"
-weight = -99
-pre = "<i class='fab fa-github pr-2'></i>"
-url = "https://github.com/kcp-dev/kcp/"
-[[menu.main]]
-name = "🤍 Contribute"
-weight = -99
-url = "https://github.com/kcp-dev/kcp/blob/main/CONTRIBUTING.md"
+# name = "GitHub"
+# weight = -99
+# pre = "<i class='fab fa-github pr-2'></i>"
+# url = "https://github.com/kcp-dev/kcp/"
+# [[menu.main]]
+# name = "🤍 Contribute"
+# weight = -99
+# url = "https://github.com/kcp-dev/kcp/blob/main/CONTRIBUTING.md"
