@@ -1,0 +1,563 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>kcp – a Kubernetes-like multi-tenant control plane – CLI Reference</title><link>http://kcp-dev.github.io/docs/cli-reference/</link><description>Recent content in CLI Reference on kcp – a Kubernetes-like multi-tenant control plane</description><generator>Hugo -- gohugo.io</generator><atom:link href="http://kcp-dev.github.io/docs/cli-reference/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: kcp</title><link>http://kcp-dev.github.io/docs/cli-reference/kcp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/cli-reference/kcp/</guid><description>
+&lt;h3 id="synopsis">Synopsis&lt;/h3>
+&lt;p>KCP is the easiest way to manage Kubernetes applications against one or more clusters, by giving you a personal control plane that schedules your workloads onto one or many clusters, and making it simple to pick up and move. Advanced use cases including spreading your apps across clusters for resiliency, scheduling batch workloads onto clusters with free capacity, and enabling collaboration for individual teams without having access to the underlying clusters.&lt;/p>
+&lt;p>This command provides KCP specific sub-command for kubectl.&lt;/p>
+&lt;h3 id="options">Options&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-v" data-lang="v">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>add_dir_header &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, adds the file directory to the header of the log messages
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>alsologtostderr log to standard &lt;span style="color:#66d9ef">error&lt;/span> &lt;span style="color:#66d9ef">as&lt;/span> well &lt;span style="color:#66d9ef">as&lt;/span> files
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">-&lt;/span>h, &lt;span style="color:#f92672">--&lt;/span>help help &lt;span style="color:#66d9ef">for&lt;/span> kcp
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_backtrace_at traceLocation when logging hits line file:&lt;span style="color:#a6e22e">N&lt;/span>, emit a stack trace (default :&lt;span style="color:#ae81ff">0&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_dir string &lt;span style="color:#a6e22e">If&lt;/span> non&lt;span style="color:#f92672">-&lt;/span>empty, write log files &lt;span style="color:#66d9ef">in&lt;/span> this directory
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_file string &lt;span style="color:#a6e22e">If&lt;/span> non&lt;span style="color:#f92672">-&lt;/span>empty, use this log file
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_file_max_size uint &lt;span style="color:#a6e22e">Defines&lt;/span> the maximum size a log file can grow to. &lt;span style="color:#a6e22e">Unit&lt;/span> &lt;span style="color:#66d9ef">is&lt;/span> megabytes. &lt;span style="color:#a6e22e">If&lt;/span> the value &lt;span style="color:#66d9ef">is&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>, the maximum file size &lt;span style="color:#66d9ef">is&lt;/span> unlimited. (default &lt;span style="color:#ae81ff">1800&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>logtostderr log to standard &lt;span style="color:#66d9ef">error&lt;/span> instead of files (default &lt;span style="color:#66d9ef">true&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>one_output &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, only write logs to their native severity level (vs also writing to each lower severity level)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>skip_headers &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, avoid header prefixes &lt;span style="color:#66d9ef">in&lt;/span> the log messages
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>skip_log_headers &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, avoid headers when opening log files
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>stderrthreshold severity logs at &lt;span style="color:#66d9ef">or&lt;/span> above this threshold &lt;span style="color:#66d9ef">go&lt;/span> to stderr (default &lt;span style="color:#ae81ff">2&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">-&lt;/span>v, &lt;span style="color:#f92672">--&lt;/span>v &lt;span style="color:#a6e22e">Level&lt;/span> number &lt;span style="color:#66d9ef">for&lt;/span> the log level verbosity
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>vmodule moduleSpec comma&lt;span style="color:#f92672">-&lt;/span>separated list of pattern&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#a6e22e">N&lt;/span> settings &lt;span style="color:#66d9ef">for&lt;/span> file&lt;span style="color:#f92672">-&lt;/span>filtered logging
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp_crd/">kcp crd&lt;/a>
+- CRD related operations&lt;/li>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp_workload/">kcp workload&lt;/a>
+- Manages KCP sync targets&lt;/li>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp_workspace/">kcp workspace&lt;/a>
+- Manages KCP workspaces&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp crd</title><link>http://kcp-dev.github.io/docs/cli-reference/kcp_crd/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/cli-reference/kcp_crd/</guid><description>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp crd [flags]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options">Options&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span> -h, --help help for crd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options-inherited-from-parent-commands">Options inherited from parent commands&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-v" data-lang="v">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>add_dir_header &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, adds the file directory to the header of the log messages
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>alsologtostderr log to standard &lt;span style="color:#66d9ef">error&lt;/span> &lt;span style="color:#66d9ef">as&lt;/span> well &lt;span style="color:#66d9ef">as&lt;/span> files
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_backtrace_at traceLocation when logging hits line file:&lt;span style="color:#a6e22e">N&lt;/span>, emit a stack trace (default :&lt;span style="color:#ae81ff">0&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_dir string &lt;span style="color:#a6e22e">If&lt;/span> non&lt;span style="color:#f92672">-&lt;/span>empty, write log files &lt;span style="color:#66d9ef">in&lt;/span> this directory
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_file string &lt;span style="color:#a6e22e">If&lt;/span> non&lt;span style="color:#f92672">-&lt;/span>empty, use this log file
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_file_max_size uint &lt;span style="color:#a6e22e">Defines&lt;/span> the maximum size a log file can grow to. &lt;span style="color:#a6e22e">Unit&lt;/span> &lt;span style="color:#66d9ef">is&lt;/span> megabytes. &lt;span style="color:#a6e22e">If&lt;/span> the value &lt;span style="color:#66d9ef">is&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>, the maximum file size &lt;span style="color:#66d9ef">is&lt;/span> unlimited. (default &lt;span style="color:#ae81ff">1800&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>logtostderr log to standard &lt;span style="color:#66d9ef">error&lt;/span> instead of files (default &lt;span style="color:#66d9ef">true&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>one_output &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, only write logs to their native severity level (vs also writing to each lower severity level)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>skip_headers &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, avoid header prefixes &lt;span style="color:#66d9ef">in&lt;/span> the log messages
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>skip_log_headers &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, avoid headers when opening log files
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>stderrthreshold severity logs at &lt;span style="color:#66d9ef">or&lt;/span> above this threshold &lt;span style="color:#66d9ef">go&lt;/span> to stderr (default &lt;span style="color:#ae81ff">2&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">-&lt;/span>v, &lt;span style="color:#f92672">--&lt;/span>v &lt;span style="color:#a6e22e">Level&lt;/span> number &lt;span style="color:#66d9ef">for&lt;/span> the log level verbosity
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>vmodule moduleSpec comma&lt;span style="color:#f92672">-&lt;/span>separated list of pattern&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#a6e22e">N&lt;/span> settings &lt;span style="color:#66d9ef">for&lt;/span> file&lt;span style="color:#f92672">-&lt;/span>filtered logging
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp/">kcp&lt;/a>
+- kubectl plugin for KCP&lt;/li>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp_crd_snapshot/">kcp crd snapshot&lt;/a>
+- Snapshot a CRD and convert it to an APIResourceSchema&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp crd snapshot</title><link>http://kcp-dev.github.io/docs/cli-reference/kcp_crd_snapshot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/cli-reference/kcp_crd_snapshot/</guid><description>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp crd snapshot -f FILE --prefix PREFIX [flags]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="examples">Examples&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # Convert a CRD in a yaml file to an APIResourceSchema. For a CRD named widgets.example.io, and a prefix value of
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # &amp;#39;today&amp;#39;, the new APIResourceSchema&amp;#39;s name will be today.widgets.example.io.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> kubectl kcp crd snapshot -f crd.yaml --prefix 2022-05-07 &amp;gt; api-resource-schema.yaml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # Convert a CRD from STDIN
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> kubectl get crd foo -o yaml | kubectl kcp crd snapshot -f - --prefix today &amp;gt; output.yaml
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options">Options&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span> -f, --filename string Path to a file containing the CRD to convert to an APIResourceSchema, or - for stdin
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -h, --help help for snapshot
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -o, --output string Output format. Valid values are &amp;#39;json&amp;#39; and &amp;#39;yaml&amp;#39; (default &amp;#34;yaml&amp;#34;)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --prefix string Prefix to use for the APIResourceSchema&amp;#39;s name, before &amp;lt;resource&amp;gt;.&amp;lt;group&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options-inherited-from-parent-commands">Options inherited from parent commands&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-v" data-lang="v">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>add_dir_header &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, adds the file directory to the header of the log messages
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>alsologtostderr log to standard &lt;span style="color:#66d9ef">error&lt;/span> &lt;span style="color:#66d9ef">as&lt;/span> well &lt;span style="color:#66d9ef">as&lt;/span> files
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_backtrace_at traceLocation when logging hits line file:&lt;span style="color:#a6e22e">N&lt;/span>, emit a stack trace (default :&lt;span style="color:#ae81ff">0&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_dir string &lt;span style="color:#a6e22e">If&lt;/span> non&lt;span style="color:#f92672">-&lt;/span>empty, write log files &lt;span style="color:#66d9ef">in&lt;/span> this directory
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_file string &lt;span style="color:#a6e22e">If&lt;/span> non&lt;span style="color:#f92672">-&lt;/span>empty, use this log file
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_file_max_size uint &lt;span style="color:#a6e22e">Defines&lt;/span> the maximum size a log file can grow to. &lt;span style="color:#a6e22e">Unit&lt;/span> &lt;span style="color:#66d9ef">is&lt;/span> megabytes. &lt;span style="color:#a6e22e">If&lt;/span> the value &lt;span style="color:#66d9ef">is&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>, the maximum file size &lt;span style="color:#66d9ef">is&lt;/span> unlimited. (default &lt;span style="color:#ae81ff">1800&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>logtostderr log to standard &lt;span style="color:#66d9ef">error&lt;/span> instead of files (default &lt;span style="color:#66d9ef">true&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>one_output &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, only write logs to their native severity level (vs also writing to each lower severity level)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>skip_headers &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, avoid header prefixes &lt;span style="color:#66d9ef">in&lt;/span> the log messages
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>skip_log_headers &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, avoid headers when opening log files
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>stderrthreshold severity logs at &lt;span style="color:#66d9ef">or&lt;/span> above this threshold &lt;span style="color:#66d9ef">go&lt;/span> to stderr (default &lt;span style="color:#ae81ff">2&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">-&lt;/span>v, &lt;span style="color:#f92672">--&lt;/span>v &lt;span style="color:#a6e22e">Level&lt;/span> number &lt;span style="color:#66d9ef">for&lt;/span> the log level verbosity
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>vmodule moduleSpec comma&lt;span style="color:#f92672">-&lt;/span>separated list of pattern&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#a6e22e">N&lt;/span> settings &lt;span style="color:#66d9ef">for&lt;/span> file&lt;span style="color:#f92672">-&lt;/span>filtered logging
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp_crd/">kcp crd&lt;/a>
+- CRD related operations&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp workload</title><link>http://kcp-dev.github.io/docs/cli-reference/kcp_workload/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/cli-reference/kcp_workload/</guid><description>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workload [flags]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options">Options&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span> -h, --help help for workload
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options-inherited-from-parent-commands">Options inherited from parent commands&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-v" data-lang="v">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>add_dir_header &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, adds the file directory to the header of the log messages
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>alsologtostderr log to standard &lt;span style="color:#66d9ef">error&lt;/span> &lt;span style="color:#66d9ef">as&lt;/span> well &lt;span style="color:#66d9ef">as&lt;/span> files
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_backtrace_at traceLocation when logging hits line file:&lt;span style="color:#a6e22e">N&lt;/span>, emit a stack trace (default :&lt;span style="color:#ae81ff">0&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_dir string &lt;span style="color:#a6e22e">If&lt;/span> non&lt;span style="color:#f92672">-&lt;/span>empty, write log files &lt;span style="color:#66d9ef">in&lt;/span> this directory
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_file string &lt;span style="color:#a6e22e">If&lt;/span> non&lt;span style="color:#f92672">-&lt;/span>empty, use this log file
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_file_max_size uint &lt;span style="color:#a6e22e">Defines&lt;/span> the maximum size a log file can grow to. &lt;span style="color:#a6e22e">Unit&lt;/span> &lt;span style="color:#66d9ef">is&lt;/span> megabytes. &lt;span style="color:#a6e22e">If&lt;/span> the value &lt;span style="color:#66d9ef">is&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>, the maximum file size &lt;span style="color:#66d9ef">is&lt;/span> unlimited. (default &lt;span style="color:#ae81ff">1800&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>logtostderr log to standard &lt;span style="color:#66d9ef">error&lt;/span> instead of files (default &lt;span style="color:#66d9ef">true&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>one_output &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, only write logs to their native severity level (vs also writing to each lower severity level)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>skip_headers &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, avoid header prefixes &lt;span style="color:#66d9ef">in&lt;/span> the log messages
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>skip_log_headers &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, avoid headers when opening log files
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>stderrthreshold severity logs at &lt;span style="color:#66d9ef">or&lt;/span> above this threshold &lt;span style="color:#66d9ef">go&lt;/span> to stderr (default &lt;span style="color:#ae81ff">2&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">-&lt;/span>v, &lt;span style="color:#f92672">--&lt;/span>v &lt;span style="color:#a6e22e">Level&lt;/span> number &lt;span style="color:#66d9ef">for&lt;/span> the log level verbosity
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>vmodule moduleSpec comma&lt;span style="color:#f92672">-&lt;/span>separated list of pattern&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#a6e22e">N&lt;/span> settings &lt;span style="color:#66d9ef">for&lt;/span> file&lt;span style="color:#f92672">-&lt;/span>filtered logging
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp/">kcp&lt;/a>
+- kubectl plugin for KCP&lt;/li>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp_workload_cordon/">kcp workload cordon&lt;/a>
+- Mark sync target as unschedulable&lt;/li>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp_workload_drain/">kcp workload drain&lt;/a>
+- Start draining sync target in preparation for maintenance&lt;/li>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp_workload_sync/">kcp workload sync&lt;/a>
+- Create a synctarget in kcp with service account and RBAC permissions. Output a manifest to deploy a syncer for the given sync target in a physical cluster.&lt;/li>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp_workload_uncordon/">kcp workload uncordon&lt;/a>
+- Mark sync target as schedulable&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp workload cordon</title><link>http://kcp-dev.github.io/docs/cli-reference/kcp_workload_cordon/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/cli-reference/kcp_workload_cordon/</guid><description>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workload cordon &amp;lt;sync-target-name&amp;gt; [flags]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="examples">Examples&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # Mark a sync target as unschedulable.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> kubectl kcp workload cordon &amp;lt;sync-target-name&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options">Options&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span> --as-uid string UID to impersonate for the operation
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --certificate-authority string Path to a cert file for the certificate authority
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --context string The name of the kubeconfig context to use
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -h, --help help for cordon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --insecure-skip-tls-verify If true, the server&amp;#39;s certificate will not be checked for validity. This will make your HTTPS connections insecure
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --kubeconfig string path to the kubeconfig file
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -n, --namespace string If present, the namespace scope for this CLI request
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --password string Password for basic authentication to the API server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --proxy-url string If provided, this URL will be used to connect via proxy
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --server string The address and port of the Kubernetes API server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --tls-server-name string If provided, this name will be used to validate server certificate. If this is not provided, hostname used to contact the server is used.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --token string Bearer token for authentication to the API server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --user string The name of the kubeconfig user to use
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --username string Username for basic authentication to the API server
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options-inherited-from-parent-commands">Options inherited from parent commands&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-v" data-lang="v">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>add_dir_header &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, adds the file directory to the header of the log messages
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>alsologtostderr log to standard &lt;span style="color:#66d9ef">error&lt;/span> &lt;span style="color:#66d9ef">as&lt;/span> well &lt;span style="color:#66d9ef">as&lt;/span> files
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_backtrace_at traceLocation when logging hits line file:&lt;span style="color:#a6e22e">N&lt;/span>, emit a stack trace (default :&lt;span style="color:#ae81ff">0&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_dir string &lt;span style="color:#a6e22e">If&lt;/span> non&lt;span style="color:#f92672">-&lt;/span>empty, write log files &lt;span style="color:#66d9ef">in&lt;/span> this directory
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_file string &lt;span style="color:#a6e22e">If&lt;/span> non&lt;span style="color:#f92672">-&lt;/span>empty, use this log file
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_file_max_size uint &lt;span style="color:#a6e22e">Defines&lt;/span> the maximum size a log file can grow to. &lt;span style="color:#a6e22e">Unit&lt;/span> &lt;span style="color:#66d9ef">is&lt;/span> megabytes. &lt;span style="color:#a6e22e">If&lt;/span> the value &lt;span style="color:#66d9ef">is&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>, the maximum file size &lt;span style="color:#66d9ef">is&lt;/span> unlimited. (default &lt;span style="color:#ae81ff">1800&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>logtostderr log to standard &lt;span style="color:#66d9ef">error&lt;/span> instead of files (default &lt;span style="color:#66d9ef">true&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>one_output &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, only write logs to their native severity level (vs also writing to each lower severity level)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>skip_headers &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, avoid header prefixes &lt;span style="color:#66d9ef">in&lt;/span> the log messages
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>skip_log_headers &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, avoid headers when opening log files
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>stderrthreshold severity logs at &lt;span style="color:#66d9ef">or&lt;/span> above this threshold &lt;span style="color:#66d9ef">go&lt;/span> to stderr (default &lt;span style="color:#ae81ff">2&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">-&lt;/span>v, &lt;span style="color:#f92672">--&lt;/span>v &lt;span style="color:#a6e22e">Level&lt;/span> number &lt;span style="color:#66d9ef">for&lt;/span> the log level verbosity
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>vmodule moduleSpec comma&lt;span style="color:#f92672">-&lt;/span>separated list of pattern&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#a6e22e">N&lt;/span> settings &lt;span style="color:#66d9ef">for&lt;/span> file&lt;span style="color:#f92672">-&lt;/span>filtered logging
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp_workload/">kcp workload&lt;/a>
+- Manages KCP sync targets&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp workload drain</title><link>http://kcp-dev.github.io/docs/cli-reference/kcp_workload_drain/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/cli-reference/kcp_workload_drain/</guid><description>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workload drain &amp;lt;sync-target-name&amp;gt; [flags]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="examples">Examples&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # Start draining a sync target in preparation for maintenance.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> kubectl kcp workload drain &amp;lt;sync-target-name&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options">Options&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span> --as-uid string UID to impersonate for the operation
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --certificate-authority string Path to a cert file for the certificate authority
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --context string The name of the kubeconfig context to use
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -h, --help help for drain
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --insecure-skip-tls-verify If true, the server&amp;#39;s certificate will not be checked for validity. This will make your HTTPS connections insecure
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --kubeconfig string path to the kubeconfig file
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -n, --namespace string If present, the namespace scope for this CLI request
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --password string Password for basic authentication to the API server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --proxy-url string If provided, this URL will be used to connect via proxy
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --server string The address and port of the Kubernetes API server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --tls-server-name string If provided, this name will be used to validate server certificate. If this is not provided, hostname used to contact the server is used.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --token string Bearer token for authentication to the API server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --user string The name of the kubeconfig user to use
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --username string Username for basic authentication to the API server
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options-inherited-from-parent-commands">Options inherited from parent commands&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-v" data-lang="v">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>add_dir_header &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, adds the file directory to the header of the log messages
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>alsologtostderr log to standard &lt;span style="color:#66d9ef">error&lt;/span> &lt;span style="color:#66d9ef">as&lt;/span> well &lt;span style="color:#66d9ef">as&lt;/span> files
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_backtrace_at traceLocation when logging hits line file:&lt;span style="color:#a6e22e">N&lt;/span>, emit a stack trace (default :&lt;span style="color:#ae81ff">0&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_dir string &lt;span style="color:#a6e22e">If&lt;/span> non&lt;span style="color:#f92672">-&lt;/span>empty, write log files &lt;span style="color:#66d9ef">in&lt;/span> this directory
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_file string &lt;span style="color:#a6e22e">If&lt;/span> non&lt;span style="color:#f92672">-&lt;/span>empty, use this log file
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_file_max_size uint &lt;span style="color:#a6e22e">Defines&lt;/span> the maximum size a log file can grow to. &lt;span style="color:#a6e22e">Unit&lt;/span> &lt;span style="color:#66d9ef">is&lt;/span> megabytes. &lt;span style="color:#a6e22e">If&lt;/span> the value &lt;span style="color:#66d9ef">is&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>, the maximum file size &lt;span style="color:#66d9ef">is&lt;/span> unlimited. (default &lt;span style="color:#ae81ff">1800&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>logtostderr log to standard &lt;span style="color:#66d9ef">error&lt;/span> instead of files (default &lt;span style="color:#66d9ef">true&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>one_output &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, only write logs to their native severity level (vs also writing to each lower severity level)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>skip_headers &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, avoid header prefixes &lt;span style="color:#66d9ef">in&lt;/span> the log messages
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>skip_log_headers &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, avoid headers when opening log files
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>stderrthreshold severity logs at &lt;span style="color:#66d9ef">or&lt;/span> above this threshold &lt;span style="color:#66d9ef">go&lt;/span> to stderr (default &lt;span style="color:#ae81ff">2&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">-&lt;/span>v, &lt;span style="color:#f92672">--&lt;/span>v &lt;span style="color:#a6e22e">Level&lt;/span> number &lt;span style="color:#66d9ef">for&lt;/span> the log level verbosity
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>vmodule moduleSpec comma&lt;span style="color:#f92672">-&lt;/span>separated list of pattern&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#a6e22e">N&lt;/span> settings &lt;span style="color:#66d9ef">for&lt;/span> file&lt;span style="color:#f92672">-&lt;/span>filtered logging
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp_workload/">kcp workload&lt;/a>
+- Manages KCP sync targets&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp workload sync</title><link>http://kcp-dev.github.io/docs/cli-reference/kcp_workload_sync/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/cli-reference/kcp_workload_sync/</guid><description>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workload sync &amp;lt;sync-target-name&amp;gt; --syncer-image &amp;lt;kcp-syncer-image&amp;gt; [--resources=&amp;lt;resource1&amp;gt;,&amp;lt;resource2&amp;gt;..] -o &amp;lt;output-file&amp;gt; [flags]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="examples">Examples&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # Ensure a syncer is running on the specified sync target.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> kubectl kcp workload sync &amp;lt;sync-target-name&amp;gt; --syncer-image &amp;lt;kcp-syncer-image&amp;gt; -o syncer.yaml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> KUBECONFIG=&amp;lt;pcluster-config&amp;gt; kubectl apply -f syncer.yaml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # Directly apply the manifest
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> kubectl kcp workload sync &amp;lt;sync-target-name&amp;gt; --syncer-image &amp;lt;kcp-syncer-image&amp;gt; -o - | KUBECONFIG=&amp;lt;pcluster-config&amp;gt; kubectl apply -f -
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options">Options&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span> --as-uid string UID to impersonate for the operation
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --burst int Burst to use when talking to API servers. (default 30)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --certificate-authority string Path to a cert file for the certificate authority
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --context string The name of the kubeconfig context to use
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --feature-gates string A set of key=value pairs that describe feature gates for alpha/experimental features. Options are:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> KCPSyncerTunnel
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> APIResponseCompression
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DryRun
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ContextualLogging
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> KCPLocationAPI
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> AdvancedAuditing
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> APIListChunking
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ServerSideApply
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> APIPriorityAndFairness
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> CustomResourceValidationExpressions
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -h, --help help for sync
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --insecure-skip-tls-verify If true, the server&amp;#39;s certificate will not be checked for validity. This will make your HTTPS connections insecure
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --kcp-namespace string The name of the kcp namespace to create a service account in. (default &amp;#34;default&amp;#34;)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --kubeconfig string path to the kubeconfig file
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -n, --namespace string The namespace to create the syncer in in the physical cluster. By default this is &amp;#34;kcp-syncer-&amp;lt;synctarget-name&amp;gt;-&amp;lt;uid&amp;gt;&amp;#34;.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -o, --output-file string The manifest file to be created and applied to the physical cluster. Use - for stdout.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --password string Password for basic authentication to the API server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --proxy-url string If provided, this URL will be used to connect via proxy
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --qps float32 QPS to use when talking to API servers. (default 20)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --replicas int Number of replicas of the syncer deployment. (default 1)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --resources strings Resources to synchronize with kcp.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --server string The address and port of the Kubernetes API server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --syncer-image string The syncer image to use in the syncer&amp;#39;s deployment YAML. Images are published at https://github.com/kcp-dev/kcp/pkgs/container/kcp%2Fsyncer.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --tls-server-name string If provided, this name will be used to validate server certificate. If this is not provided, hostname used to contact the server is used.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --token string Bearer token for authentication to the API server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --user string The name of the kubeconfig user to use
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --username string Username for basic authentication to the API server
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options-inherited-from-parent-commands">Options inherited from parent commands&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-v" data-lang="v">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>add_dir_header &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, adds the file directory to the header of the log messages
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>alsologtostderr log to standard &lt;span style="color:#66d9ef">error&lt;/span> &lt;span style="color:#66d9ef">as&lt;/span> well &lt;span style="color:#66d9ef">as&lt;/span> files
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_backtrace_at traceLocation when logging hits line file:&lt;span style="color:#a6e22e">N&lt;/span>, emit a stack trace (default :&lt;span style="color:#ae81ff">0&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_dir string &lt;span style="color:#a6e22e">If&lt;/span> non&lt;span style="color:#f92672">-&lt;/span>empty, write log files &lt;span style="color:#66d9ef">in&lt;/span> this directory
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_file string &lt;span style="color:#a6e22e">If&lt;/span> non&lt;span style="color:#f92672">-&lt;/span>empty, use this log file
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_file_max_size uint &lt;span style="color:#a6e22e">Defines&lt;/span> the maximum size a log file can grow to. &lt;span style="color:#a6e22e">Unit&lt;/span> &lt;span style="color:#66d9ef">is&lt;/span> megabytes. &lt;span style="color:#a6e22e">If&lt;/span> the value &lt;span style="color:#66d9ef">is&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>, the maximum file size &lt;span style="color:#66d9ef">is&lt;/span> unlimited. (default &lt;span style="color:#ae81ff">1800&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>logtostderr log to standard &lt;span style="color:#66d9ef">error&lt;/span> instead of files (default &lt;span style="color:#66d9ef">true&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>one_output &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, only write logs to their native severity level (vs also writing to each lower severity level)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>skip_headers &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, avoid header prefixes &lt;span style="color:#66d9ef">in&lt;/span> the log messages
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>skip_log_headers &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, avoid headers when opening log files
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>stderrthreshold severity logs at &lt;span style="color:#66d9ef">or&lt;/span> above this threshold &lt;span style="color:#66d9ef">go&lt;/span> to stderr (default &lt;span style="color:#ae81ff">2&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">-&lt;/span>v, &lt;span style="color:#f92672">--&lt;/span>v &lt;span style="color:#a6e22e">Level&lt;/span> number &lt;span style="color:#66d9ef">for&lt;/span> the log level verbosity
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>vmodule moduleSpec comma&lt;span style="color:#f92672">-&lt;/span>separated list of pattern&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#a6e22e">N&lt;/span> settings &lt;span style="color:#66d9ef">for&lt;/span> file&lt;span style="color:#f92672">-&lt;/span>filtered logging
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp_workload/">kcp workload&lt;/a>
+- Manages KCP sync targets&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp workload uncordon</title><link>http://kcp-dev.github.io/docs/cli-reference/kcp_workload_uncordon/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/cli-reference/kcp_workload_uncordon/</guid><description>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workload uncordon &amp;lt;sync-target-name&amp;gt; [flags]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="examples">Examples&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # Mark a sync target as schedulable.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> kubectl kcp workload uncordon &amp;lt;sync-target-name&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options">Options&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span> --as-uid string UID to impersonate for the operation
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --certificate-authority string Path to a cert file for the certificate authority
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --context string The name of the kubeconfig context to use
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -h, --help help for uncordon
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --insecure-skip-tls-verify If true, the server&amp;#39;s certificate will not be checked for validity. This will make your HTTPS connections insecure
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --kubeconfig string path to the kubeconfig file
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -n, --namespace string If present, the namespace scope for this CLI request
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --password string Password for basic authentication to the API server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --proxy-url string If provided, this URL will be used to connect via proxy
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --server string The address and port of the Kubernetes API server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --tls-server-name string If provided, this name will be used to validate server certificate. If this is not provided, hostname used to contact the server is used.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --token string Bearer token for authentication to the API server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --user string The name of the kubeconfig user to use
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --username string Username for basic authentication to the API server
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options-inherited-from-parent-commands">Options inherited from parent commands&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-v" data-lang="v">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>add_dir_header &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, adds the file directory to the header of the log messages
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>alsologtostderr log to standard &lt;span style="color:#66d9ef">error&lt;/span> &lt;span style="color:#66d9ef">as&lt;/span> well &lt;span style="color:#66d9ef">as&lt;/span> files
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_backtrace_at traceLocation when logging hits line file:&lt;span style="color:#a6e22e">N&lt;/span>, emit a stack trace (default :&lt;span style="color:#ae81ff">0&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_dir string &lt;span style="color:#a6e22e">If&lt;/span> non&lt;span style="color:#f92672">-&lt;/span>empty, write log files &lt;span style="color:#66d9ef">in&lt;/span> this directory
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_file string &lt;span style="color:#a6e22e">If&lt;/span> non&lt;span style="color:#f92672">-&lt;/span>empty, use this log file
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_file_max_size uint &lt;span style="color:#a6e22e">Defines&lt;/span> the maximum size a log file can grow to. &lt;span style="color:#a6e22e">Unit&lt;/span> &lt;span style="color:#66d9ef">is&lt;/span> megabytes. &lt;span style="color:#a6e22e">If&lt;/span> the value &lt;span style="color:#66d9ef">is&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>, the maximum file size &lt;span style="color:#66d9ef">is&lt;/span> unlimited. (default &lt;span style="color:#ae81ff">1800&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>logtostderr log to standard &lt;span style="color:#66d9ef">error&lt;/span> instead of files (default &lt;span style="color:#66d9ef">true&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>one_output &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, only write logs to their native severity level (vs also writing to each lower severity level)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>skip_headers &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, avoid header prefixes &lt;span style="color:#66d9ef">in&lt;/span> the log messages
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>skip_log_headers &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, avoid headers when opening log files
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>stderrthreshold severity logs at &lt;span style="color:#66d9ef">or&lt;/span> above this threshold &lt;span style="color:#66d9ef">go&lt;/span> to stderr (default &lt;span style="color:#ae81ff">2&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">-&lt;/span>v, &lt;span style="color:#f92672">--&lt;/span>v &lt;span style="color:#a6e22e">Level&lt;/span> number &lt;span style="color:#66d9ef">for&lt;/span> the log level verbosity
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>vmodule moduleSpec comma&lt;span style="color:#f92672">-&lt;/span>separated list of pattern&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#a6e22e">N&lt;/span> settings &lt;span style="color:#66d9ef">for&lt;/span> file&lt;span style="color:#f92672">-&lt;/span>filtered logging
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp_workload/">kcp workload&lt;/a>
+- Manages KCP sync targets&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp workspace</title><link>http://kcp-dev.github.io/docs/cli-reference/kcp_workspace/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/cli-reference/kcp_workspace/</guid><description>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workspace [create|create-context|use|current|&amp;lt;workspace&amp;gt;|..|.|-|~|&amp;lt;root:absolute:workspace&amp;gt;] [flags]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="examples">Examples&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # shows the workspace you are currently using
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> kubectl workspace .
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # enter a given workspace (this will change the current-context of your current KUBECONFIG)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> kubectl workspace use my-workspace
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # short-hand for the use syntax
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> kubectl workspace my-workspace
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # list sub-workspaces in the current workspace
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> kubectl get workspaces
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # enter a given absolute workspace
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> kubectl workspace root:default:my-workspace
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # enter the parent workspace
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> kubectl workspace ..
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # enter the previous workspace
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> kubectl workspace -
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # go to your home workspace
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> kubectl workspace
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # create a workspace and immediately enter it
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> kubectl workspace create my-workspace --enter
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # create a context with the current workspace, e.g. root:default:my-workspace
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> kubectl workspace create-context
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # create a context with the current workspace, named context-name
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> kubectl workspace create-context context-name
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options">Options&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span> --as-uid string UID to impersonate for the operation
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --certificate-authority string Path to a cert file for the certificate authority
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --context string The name of the kubeconfig context to use
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -h, --help help for workspace
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --insecure-skip-tls-verify If true, the server&amp;#39;s certificate will not be checked for validity. This will make your HTTPS connections insecure
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --kubeconfig string path to the kubeconfig file
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -n, --namespace string If present, the namespace scope for this CLI request
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --password string Password for basic authentication to the API server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --proxy-url string If provided, this URL will be used to connect via proxy
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --server string The address and port of the Kubernetes API server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --short Print only the name of the workspace, e.g. for integration into the shell prompt
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --tls-server-name string If provided, this name will be used to validate server certificate. If this is not provided, hostname used to contact the server is used.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --token string Bearer token for authentication to the API server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --user string The name of the kubeconfig user to use
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --username string Username for basic authentication to the API server
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options-inherited-from-parent-commands">Options inherited from parent commands&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-v" data-lang="v">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>add_dir_header &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, adds the file directory to the header of the log messages
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>alsologtostderr log to standard &lt;span style="color:#66d9ef">error&lt;/span> &lt;span style="color:#66d9ef">as&lt;/span> well &lt;span style="color:#66d9ef">as&lt;/span> files
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_backtrace_at traceLocation when logging hits line file:&lt;span style="color:#a6e22e">N&lt;/span>, emit a stack trace (default :&lt;span style="color:#ae81ff">0&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_dir string &lt;span style="color:#a6e22e">If&lt;/span> non&lt;span style="color:#f92672">-&lt;/span>empty, write log files &lt;span style="color:#66d9ef">in&lt;/span> this directory
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_file string &lt;span style="color:#a6e22e">If&lt;/span> non&lt;span style="color:#f92672">-&lt;/span>empty, use this log file
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>log_file_max_size uint &lt;span style="color:#a6e22e">Defines&lt;/span> the maximum size a log file can grow to. &lt;span style="color:#a6e22e">Unit&lt;/span> &lt;span style="color:#66d9ef">is&lt;/span> megabytes. &lt;span style="color:#a6e22e">If&lt;/span> the value &lt;span style="color:#66d9ef">is&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>, the maximum file size &lt;span style="color:#66d9ef">is&lt;/span> unlimited. (default &lt;span style="color:#ae81ff">1800&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>logtostderr log to standard &lt;span style="color:#66d9ef">error&lt;/span> instead of files (default &lt;span style="color:#66d9ef">true&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>one_output &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, only write logs to their native severity level (vs also writing to each lower severity level)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>skip_headers &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, avoid header prefixes &lt;span style="color:#66d9ef">in&lt;/span> the log messages
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>skip_log_headers &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, avoid headers when opening log files
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>stderrthreshold severity logs at &lt;span style="color:#66d9ef">or&lt;/span> above this threshold &lt;span style="color:#66d9ef">go&lt;/span> to stderr (default &lt;span style="color:#ae81ff">2&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">-&lt;/span>v, &lt;span style="color:#f92672">--&lt;/span>v &lt;span style="color:#a6e22e">Level&lt;/span> number &lt;span style="color:#66d9ef">for&lt;/span> the log level verbosity
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>vmodule moduleSpec comma&lt;span style="color:#f92672">-&lt;/span>separated list of pattern&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#a6e22e">N&lt;/span> settings &lt;span style="color:#66d9ef">for&lt;/span> file&lt;span style="color:#f92672">-&lt;/span>filtered logging
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp/">kcp&lt;/a>
+- kubectl plugin for KCP&lt;/li>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp_workspace_create/">kcp workspace create&lt;/a>
+- Creates a new workspace&lt;/li>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp_workspace_create-context/">kcp workspace create-context&lt;/a>
+- Create a kubeconfig context for the current workspace&lt;/li>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp_workspace_current/">kcp workspace current&lt;/a>
+- Print the current workspace. Same as &amp;lsquo;kubectl ws .&amp;rsquo;.&lt;/li>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp_workspace_tree/">kcp workspace tree&lt;/a>
+- Print the current workspace tree.&lt;/li>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp_workspace_use/">kcp workspace use&lt;/a>
+- Uses the given workspace as the current workspace. Using - means previous workspace, .. means parent workspace, . mean current, ~ means home workspace&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp workspace create</title><link>http://kcp-dev.github.io/docs/cli-reference/kcp_workspace_create/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/cli-reference/kcp_workspace_create/</guid><description>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workspace create [flags]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="examples">Examples&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workspace create &amp;lt;workspace name&amp;gt; [--type=&amp;lt;type&amp;gt;] [--enter [--ignore-not-ready]] --ignore-existing
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options">Options&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span> --enter Immediately enter the created workspace
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -h, --help help for create
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --ignore-existing Ignore if the workspace already exists. Requires none or absolute type path.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --kubeconfig string path to the kubeconfig file
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --type string A workspace type. The default type depends on where this child workspace is created.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options-inherited-from-parent-commands">Options inherited from parent commands&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-v" data-lang="v">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>add_dir_header &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, adds the file directory to the header of the log messages
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>alsologtostderr log to standard &lt;span style="color:#66d9ef">error&lt;/span> &lt;span style="color:#66d9ef">as&lt;/span> well &lt;span style="color:#66d9ef">as&lt;/span> files
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>&lt;span style="color:#66d9ef">as&lt;/span>&lt;span style="color:#f92672">-&lt;/span>uid string &lt;span style="color:#a6e22e">UID&lt;/span> to impersonate &lt;span style="color:#66d9ef">for&lt;/span> the operation
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>certificate&lt;span style="color:#f92672">-&lt;/span>authority string &lt;span style="color:#a6e22e">Path&lt;/span> to a cert file &lt;span style="color:#66d9ef">for&lt;/span> the certificate authority
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>context string &lt;span style="color:#a6e22e">The&lt;/span> name of the kubeconfig context to use
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>insecure&lt;span style="color:#f92672">-&lt;/span>skip&lt;span style="color:#f92672">-&lt;/span>tls&lt;span style="color:#f92672">-&lt;/span>verify &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, the server&lt;span style="color:#e6db74">&amp;#39;s certificate will not be checked for validity. This will make your HTTPS connections insecure
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --log_backtrace_at traceLocation when logging hits line file:N, emit a stack trace (default :0)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --log_dir string If non-empty, write log files in this directory
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --log_file string If non-empty, use this log file
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --log_file_max_size uint Defines the maximum size a log file can grow to. Unit is megabytes. If the value is 0, the maximum file size is unlimited. (default 1800)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --logtostderr log to standard error instead of files (default true)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> -n, --namespace string If present, the namespace scope for this CLI request
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --one_output If true, only write logs to their native severity level (vs also writing to each lower severity level)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --password string Password for basic authentication to the API server
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --proxy-url string If provided, this URL will be used to connect via proxy
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --server string The address and port of the Kubernetes API server
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --skip_headers If true, avoid header prefixes in the log messages
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --skip_log_headers If true, avoid headers when opening log files
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --stderrthreshold severity logs at or above this threshold go to stderr (default 2)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --tls-server-name string If provided, this name will be used to validate server certificate. If this is not provided, hostname used to contact the server is used.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --token string Bearer token for authentication to the API server
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --user string The name of the kubeconfig user to use
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --username string Username for basic authentication to the API server
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> -v, --v Level number for the log level verbosity
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --vmodule moduleSpec comma-separated list of pattern=N settings for file-filtered logging
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp_workspace/">kcp workspace&lt;/a>
+- Manages KCP workspaces&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp workspace create-context</title><link>http://kcp-dev.github.io/docs/cli-reference/kcp_workspace_create-context/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/cli-reference/kcp_workspace_create-context/</guid><description>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workspace create-context [&amp;lt;context-name&amp;gt;] [--overwrite] [flags]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="examples">Examples&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workspace create-context
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options">Options&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span> -h, --help help for create-context
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --kubeconfig string path to the kubeconfig file
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --overwrite Overwrite the context if it already exists
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options-inherited-from-parent-commands">Options inherited from parent commands&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-v" data-lang="v">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>add_dir_header &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, adds the file directory to the header of the log messages
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>alsologtostderr log to standard &lt;span style="color:#66d9ef">error&lt;/span> &lt;span style="color:#66d9ef">as&lt;/span> well &lt;span style="color:#66d9ef">as&lt;/span> files
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>&lt;span style="color:#66d9ef">as&lt;/span>&lt;span style="color:#f92672">-&lt;/span>uid string &lt;span style="color:#a6e22e">UID&lt;/span> to impersonate &lt;span style="color:#66d9ef">for&lt;/span> the operation
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>certificate&lt;span style="color:#f92672">-&lt;/span>authority string &lt;span style="color:#a6e22e">Path&lt;/span> to a cert file &lt;span style="color:#66d9ef">for&lt;/span> the certificate authority
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>context string &lt;span style="color:#a6e22e">The&lt;/span> name of the kubeconfig context to use
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>insecure&lt;span style="color:#f92672">-&lt;/span>skip&lt;span style="color:#f92672">-&lt;/span>tls&lt;span style="color:#f92672">-&lt;/span>verify &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, the server&lt;span style="color:#e6db74">&amp;#39;s certificate will not be checked for validity. This will make your HTTPS connections insecure
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --log_backtrace_at traceLocation when logging hits line file:N, emit a stack trace (default :0)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --log_dir string If non-empty, write log files in this directory
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --log_file string If non-empty, use this log file
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --log_file_max_size uint Defines the maximum size a log file can grow to. Unit is megabytes. If the value is 0, the maximum file size is unlimited. (default 1800)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --logtostderr log to standard error instead of files (default true)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> -n, --namespace string If present, the namespace scope for this CLI request
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --one_output If true, only write logs to their native severity level (vs also writing to each lower severity level)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --password string Password for basic authentication to the API server
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --proxy-url string If provided, this URL will be used to connect via proxy
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --server string The address and port of the Kubernetes API server
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --skip_headers If true, avoid header prefixes in the log messages
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --skip_log_headers If true, avoid headers when opening log files
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --stderrthreshold severity logs at or above this threshold go to stderr (default 2)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --tls-server-name string If provided, this name will be used to validate server certificate. If this is not provided, hostname used to contact the server is used.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --token string Bearer token for authentication to the API server
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --user string The name of the kubeconfig user to use
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --username string Username for basic authentication to the API server
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> -v, --v Level number for the log level verbosity
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --vmodule moduleSpec comma-separated list of pattern=N settings for file-filtered logging
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp_workspace/">kcp workspace&lt;/a>
+- Manages KCP workspaces&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp workspace current</title><link>http://kcp-dev.github.io/docs/cli-reference/kcp_workspace_current/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/cli-reference/kcp_workspace_current/</guid><description>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workspace current [--short] [flags]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="examples">Examples&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workspace current
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options">Options&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span> -h, --help help for current
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --kubeconfig string path to the kubeconfig file
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --short Print only the name of the workspace, e.g. for integration into the shell prompt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options-inherited-from-parent-commands">Options inherited from parent commands&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-v" data-lang="v">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>add_dir_header &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, adds the file directory to the header of the log messages
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>alsologtostderr log to standard &lt;span style="color:#66d9ef">error&lt;/span> &lt;span style="color:#66d9ef">as&lt;/span> well &lt;span style="color:#66d9ef">as&lt;/span> files
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>&lt;span style="color:#66d9ef">as&lt;/span>&lt;span style="color:#f92672">-&lt;/span>uid string &lt;span style="color:#a6e22e">UID&lt;/span> to impersonate &lt;span style="color:#66d9ef">for&lt;/span> the operation
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>certificate&lt;span style="color:#f92672">-&lt;/span>authority string &lt;span style="color:#a6e22e">Path&lt;/span> to a cert file &lt;span style="color:#66d9ef">for&lt;/span> the certificate authority
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>context string &lt;span style="color:#a6e22e">The&lt;/span> name of the kubeconfig context to use
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>insecure&lt;span style="color:#f92672">-&lt;/span>skip&lt;span style="color:#f92672">-&lt;/span>tls&lt;span style="color:#f92672">-&lt;/span>verify &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, the server&lt;span style="color:#e6db74">&amp;#39;s certificate will not be checked for validity. This will make your HTTPS connections insecure
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --log_backtrace_at traceLocation when logging hits line file:N, emit a stack trace (default :0)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --log_dir string If non-empty, write log files in this directory
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --log_file string If non-empty, use this log file
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --log_file_max_size uint Defines the maximum size a log file can grow to. Unit is megabytes. If the value is 0, the maximum file size is unlimited. (default 1800)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --logtostderr log to standard error instead of files (default true)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> -n, --namespace string If present, the namespace scope for this CLI request
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --one_output If true, only write logs to their native severity level (vs also writing to each lower severity level)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --password string Password for basic authentication to the API server
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --proxy-url string If provided, this URL will be used to connect via proxy
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --server string The address and port of the Kubernetes API server
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --skip_headers If true, avoid header prefixes in the log messages
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --skip_log_headers If true, avoid headers when opening log files
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --stderrthreshold severity logs at or above this threshold go to stderr (default 2)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --tls-server-name string If provided, this name will be used to validate server certificate. If this is not provided, hostname used to contact the server is used.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --token string Bearer token for authentication to the API server
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --user string The name of the kubeconfig user to use
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --username string Username for basic authentication to the API server
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> -v, --v Level number for the log level verbosity
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --vmodule moduleSpec comma-separated list of pattern=N settings for file-filtered logging
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp_workspace/">kcp workspace&lt;/a>
+- Manages KCP workspaces&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp workspace tree</title><link>http://kcp-dev.github.io/docs/cli-reference/kcp_workspace_tree/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/cli-reference/kcp_workspace_tree/</guid><description>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workspace tree [flags]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="examples">Examples&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workspace tree
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options">Options&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span> -f, --full Show full workspaces names
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -h, --help help for tree
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --kubeconfig string path to the kubeconfig file
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options-inherited-from-parent-commands">Options inherited from parent commands&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-v" data-lang="v">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>add_dir_header &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, adds the file directory to the header of the log messages
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>alsologtostderr log to standard &lt;span style="color:#66d9ef">error&lt;/span> &lt;span style="color:#66d9ef">as&lt;/span> well &lt;span style="color:#66d9ef">as&lt;/span> files
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>&lt;span style="color:#66d9ef">as&lt;/span>&lt;span style="color:#f92672">-&lt;/span>uid string &lt;span style="color:#a6e22e">UID&lt;/span> to impersonate &lt;span style="color:#66d9ef">for&lt;/span> the operation
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>certificate&lt;span style="color:#f92672">-&lt;/span>authority string &lt;span style="color:#a6e22e">Path&lt;/span> to a cert file &lt;span style="color:#66d9ef">for&lt;/span> the certificate authority
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>context string &lt;span style="color:#a6e22e">The&lt;/span> name of the kubeconfig context to use
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>insecure&lt;span style="color:#f92672">-&lt;/span>skip&lt;span style="color:#f92672">-&lt;/span>tls&lt;span style="color:#f92672">-&lt;/span>verify &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, the server&lt;span style="color:#e6db74">&amp;#39;s certificate will not be checked for validity. This will make your HTTPS connections insecure
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --log_backtrace_at traceLocation when logging hits line file:N, emit a stack trace (default :0)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --log_dir string If non-empty, write log files in this directory
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --log_file string If non-empty, use this log file
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --log_file_max_size uint Defines the maximum size a log file can grow to. Unit is megabytes. If the value is 0, the maximum file size is unlimited. (default 1800)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --logtostderr log to standard error instead of files (default true)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> -n, --namespace string If present, the namespace scope for this CLI request
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --one_output If true, only write logs to their native severity level (vs also writing to each lower severity level)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --password string Password for basic authentication to the API server
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --proxy-url string If provided, this URL will be used to connect via proxy
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --server string The address and port of the Kubernetes API server
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --skip_headers If true, avoid header prefixes in the log messages
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --skip_log_headers If true, avoid headers when opening log files
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --stderrthreshold severity logs at or above this threshold go to stderr (default 2)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --tls-server-name string If provided, this name will be used to validate server certificate. If this is not provided, hostname used to contact the server is used.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --token string Bearer token for authentication to the API server
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --user string The name of the kubeconfig user to use
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --username string Username for basic authentication to the API server
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> -v, --v Level number for the log level verbosity
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --vmodule moduleSpec comma-separated list of pattern=N settings for file-filtered logging
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp_workspace/">kcp workspace&lt;/a>
+- Manages KCP workspaces&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp workspace use</title><link>http://kcp-dev.github.io/docs/cli-reference/kcp_workspace_use/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/cli-reference/kcp_workspace_use/</guid><description>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workspace use &amp;lt;workspace&amp;gt;|..|.|-|~|&amp;lt;root:absolute:workspace&amp;gt; [flags]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options">Options&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span> -h, --help help for use
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --kubeconfig string path to the kubeconfig file
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --short Print only the name of the workspace, e.g. for integration into the shell prompt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options-inherited-from-parent-commands">Options inherited from parent commands&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-v" data-lang="v">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>add_dir_header &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, adds the file directory to the header of the log messages
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>alsologtostderr log to standard &lt;span style="color:#66d9ef">error&lt;/span> &lt;span style="color:#66d9ef">as&lt;/span> well &lt;span style="color:#66d9ef">as&lt;/span> files
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>&lt;span style="color:#66d9ef">as&lt;/span>&lt;span style="color:#f92672">-&lt;/span>uid string &lt;span style="color:#a6e22e">UID&lt;/span> to impersonate &lt;span style="color:#66d9ef">for&lt;/span> the operation
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>certificate&lt;span style="color:#f92672">-&lt;/span>authority string &lt;span style="color:#a6e22e">Path&lt;/span> to a cert file &lt;span style="color:#66d9ef">for&lt;/span> the certificate authority
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>context string &lt;span style="color:#a6e22e">The&lt;/span> name of the kubeconfig context to use
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>insecure&lt;span style="color:#f92672">-&lt;/span>skip&lt;span style="color:#f92672">-&lt;/span>tls&lt;span style="color:#f92672">-&lt;/span>verify &lt;span style="color:#a6e22e">If&lt;/span> &lt;span style="color:#66d9ef">true&lt;/span>, the server&lt;span style="color:#e6db74">&amp;#39;s certificate will not be checked for validity. This will make your HTTPS connections insecure
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --log_backtrace_at traceLocation when logging hits line file:N, emit a stack trace (default :0)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --log_dir string If non-empty, write log files in this directory
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --log_file string If non-empty, use this log file
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --log_file_max_size uint Defines the maximum size a log file can grow to. Unit is megabytes. If the value is 0, the maximum file size is unlimited. (default 1800)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --logtostderr log to standard error instead of files (default true)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> -n, --namespace string If present, the namespace scope for this CLI request
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --one_output If true, only write logs to their native severity level (vs also writing to each lower severity level)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --password string Password for basic authentication to the API server
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --proxy-url string If provided, this URL will be used to connect via proxy
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --server string The address and port of the Kubernetes API server
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --skip_headers If true, avoid header prefixes in the log messages
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --skip_log_headers If true, avoid headers when opening log files
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --stderrthreshold severity logs at or above this threshold go to stderr (default 2)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --tls-server-name string If provided, this name will be used to validate server certificate. If this is not provided, hostname used to contact the server is used.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --token string Bearer token for authentication to the API server
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --user string The name of the kubeconfig user to use
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --username string Username for basic authentication to the API server
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> -v, --v Level number for the log level verbosity
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --vmodule moduleSpec comma-separated list of pattern=N settings for file-filtered logging
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="http://kcp-dev.github.io/docs/cli-reference/kcp_workspace/">kcp workspace&lt;/a>
+- Manages KCP workspaces&lt;/li>
+&lt;/ul></description></item></channel></rss>
