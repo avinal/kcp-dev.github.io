@@ -1,7 +1,455 @@
-<!doctype html><html itemscope itemtype=http://schema.org/WebPage lang=en class=no-js><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=generator content="Hugo 0.104.1"><link rel=alternate type=application/rss+xml href=http://avinal.space/kcp-dev.github.io/index.xml><meta name=robots content="index, follow"><link rel="shortcut icon" href=/kcp-dev.github.io/favicons/favicon.ico><link rel=apple-touch-icon href=/kcp-dev.github.io/favicons/apple-touch-icon-180x180.png sizes=180x180><link rel=icon type=image/png href=/kcp-dev.github.io/favicons/favicon-16x16.png sizes=16x16><link rel=icon type=image/png href=/kcp-dev.github.io/favicons/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/kcp-dev.github.io/favicons/android-36x36.png sizes=36x36><link rel=icon type=image/png href=/kcp-dev.github.io/favicons/android-48x48.png sizes=48x48><link rel=icon type=image/png href=/kcp-dev.github.io/favicons/android-72x72.png sizes=72x72><link rel=icon type=image/png href=/kcp-dev.github.io/favicons/android-96x96.png sizes=96x96><link rel=icon type=image/png href=/kcp-dev.github.io/favicons/android-144x144.png sizes=144x144><link rel=icon type=image/png href=/kcp-dev.github.io/favicons/android-192x192.png sizes=192x192><title>kcp – a Kubernetes-like multi-tenant control plane</title><meta name=description content><meta property="og:title" content="kcp – a Kubernetes-like multi-tenant control plane"><meta property="og:description" content="kcp documentation"><meta property="og:type" content="website"><meta property="og:url" content="http://avinal.space/kcp-dev.github.io/"><meta property="og:site_name" content="kcp – a Kubernetes-like multi-tenant control plane"><meta itemprop=name content="kcp – a Kubernetes-like multi-tenant control plane"><meta itemprop=description content="kcp documentation"><meta name=twitter:card content="summary"><meta name=twitter:title content="kcp – a Kubernetes-like multi-tenant control plane"><meta name=twitter:description content="kcp documentation"><link rel=preload href=/kcp-dev.github.io/scss/main.min.c65bd9d7eb2baaad4d2c30a0905cadbf15f5bd43173d18c70d61a6eee706a020.css as=style><link href=/kcp-dev.github.io/scss/main.min.c65bd9d7eb2baaad4d2c30a0905cadbf15f5bd43173d18c70d61a6eee706a020.css rel=stylesheet integrity><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity=sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK crossorigin=anonymous></script>
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-00000000-0","auto"),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script></head><body class=td-home><header><nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-sm-row td-navbar"><a class="navbar-brand mr-2" style=display:flex;justify-content:center href=/kcp-dev.github.io/><img class=navbar-logo src=/logo.png width=38px alt=logo></a>
-<a class=navbar-brand style=display:flex;justify-content:center href=/kcp-dev.github.io/><span class="font-weight-bold d-none d-sm-inline d-lg-none" style=font-size:.875rem>kcp</span>
-<span class="font-weight-bold d-none d-lg-inline">kcp</span></a><div class="td-navbar-nav-scroll ml-sm-auto mt-0" id=main_navbar><ul class="navbar-nav mt-0"><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/kcp-dev.github.io/blog/><span>Blog</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=https://github.com/kcp-dev/kcp/blob/main/CONTRIBUTING.md target=_blank><span>Contribute</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=https://github.com/kcp-dev/kcp/ target=_blank><span>GitHub</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/kcp-dev.github.io/docs/><span>Documentation</span></a></li></ul></div><div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off></div></nav></header><div class="container-fluid td-default td-outer"><main role=main class=td-main></main><footer class="bg-dark py-5 row d-print-none"><div class="container-fluid mx-sm-5"><div class=row><div class="col-6 col-sm-4 text-xs-center order-sm-2"><ul class="list-inline mb-0"><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title="User mailing list" aria-label="User mailing list"><a class=text-white target=_blank rel=noopener href=https://groups.google.com/g/kcp-users aria-label="User mailing list"><i class="fa fa-envelope"></i></a></li><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title=Twitter aria-label=Twitter><a class=text-white target=_blank rel=noopener href=https://twitter.com/kcp aria-label=Twitter><i class="fab fa-twitter"></i></a></li></ul></div><div class="col-6 col-sm-4 text-right text-xs-center order-sm-3"><ul class="list-inline mb-0"><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title=GitHub aria-label=GitHub><a class=text-white target=_blank rel=noopener href=https://github.com/kcp-dev/kcp aria-label=GitHub><i class="fab fa-github"></i></a></li><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title=Slack aria-label=Slack><a class=text-white target=_blank rel=noopener href=https://kubernetes.slack.com/archives/C021U8WSAFK aria-label=Slack><i class="fab fa-slack"></i></a></li><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title="Developer mailing list" aria-label="Developer mailing list"><a class=text-white target=_blank rel=noopener href=https://groups.google.com/g/kcp-dev aria-label="Developer mailing list"><i class="fa fa-envelope"></i></a></li></ul></div><div class="col-12 col-sm-4 text-center py-2 order-sm-2"><small class=text-white>&copy; 2022 The kcp Authors All Rights Reserved</small></div></div></div></footer></div><script src=https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js integrity=sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN crossorigin=anonymous></script>
-<script src=https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin=anonymous></script>
-<script src=/js/tabpane-persist.js></script>
-<script src=/kcp-dev.github.io/js/main.min.ab5782f4ac34d02d9c5eb3ff3f8fe491f646a255a3f2a6121c80c7416e763f5e.js integrity="sha256-q1eC9Kw00C2cXrP/P4/kkfZGolWj8qYSHIDHQW52P14=" crossorigin=anonymous></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="kcp,kubernetes,control-plane,multi-cloud,multi-cluster">
+    <meta name="description" content="A horizontally scalable generic control plane based on Kubernetes.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<link rel="canonical" href="https://kcp.io/">
+	<meta name="robots" content="index, follow">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@kcp">
+	<meta name="twitter:title" content="kcp – Simplifying building massively multi-tenant services. Together.">
+	<meta name="twitter:description" content="A horizontally scalable generic control plane based on Kubernetes.">
+	<meta name="twitter:image" content="https://kcp.io/img/shida-social-card.png">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="kcp – Simplifying building massively multi-tenant services. Together.">
+	<meta property="og:title" content="kcp – Simplifying building massively multi-tenant services. Together.">
+	<meta property="og:description" content="A horizontally scalable generic control plane based on Kubernetes.">
+	<meta property="og:url" content="https://kcp.io/"> 
+	<meta property="og:image" content="https://kcp.io/img/shida-social-card.png">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    
+	<link rel="stylesheet" type="text/css" href="./all.css?8762">
+	
+    <title>kcp – Simplifying building massively multi-tenant services. Together.</title>
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"></script>
+
+<script>
+ $(window).scroll(function(){
+        if($(this).scrollTop()>5){
+            $(".freedom-nav").addClass("fixed-top navbar-dark bg-dark nav-bdr kcp-bg-dark");
+        }
+
+        else{
+            $(".freedom-nav").removeClass("fixed-top navbar-dark bg-dark nav-bdr kcp-bg-dark");
+        }
+    })
+    //
+$(function(){
+    $(window).scroll(function(){
+        if($(this).scrollTop()>5){
+            $(".navbar .navbar-brand img").attr("src","img/light.png");
+        }
+
+        else{
+            $(".navbar .navbar-brand img").attr("src","img/dark.png");
+        }
+    })
+})
+</script>
+
+    
+<!-- Analytics -->
+ 
+<!-- Analytics END -->
+    
+</head>
+<body>
+<!-- Main container -->
+<div class="page-container">
+    
+<!-- header -->
+<div class="bloc sticky-nav freedom-nav kcp-navbar bgc-black l-bloc" id="header">
+	<div class="container bloc-no-padding kcp-vertical-center">
+		<div class="row">
+			<div class="col align-self-center">
+				<nav class="navbar row freedom-navbar navbar-expand-md navbar-dark" role="navigation">
+					<div class="container-fluid">
+						<button id="nav-toggle" type="button" class="ui-navbar-toggler navbar-toggler border-0 p-0 me-md-0 ms-auto" data-toggle="collapse" data-target=".navbar-45418" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse navbar-45418  fullscreen-nav open-down">
+							<ul class="site-navigation nav navbar-nav ms-auto">
+								<li class="nav-item kcp-navbar-menu">
+									<a href="/docs" class="nav-link float-lg-end">Documentation</a>
+								</li>
+								<li class="nav-item kcp-navbar-menu">
+									<a href="/blog" class="nav-link">Blog</a>
+								</li>
+								<li class="nav-item kcp-navbar-menu">
+									<a href="#" class="nav-link" data-scroll-speed="1000" onclick="scrollToTarget('#contribute',this)">Contribute</a>
+								</li>
+								<li class="nav-item kcp-navbar-menu">
+									<a href="https://github.com/kcp-dev/kcp" class="nav-link">Github</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- header END -->
+
+<!-- header-logos -->
+<div class="bloc object-hidden l-bloc" id="header-logos">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="text-center text-md-start col-lg-3">
+				<img src="img/dark.png" class="img-fluid mx-auto d-block" alt="shida dark" /><img src="img/light.png" class="img-fluid mx-auto d-block" alt="shida light" />
+			</div>
+		</div>
+	</div>
+</div>
+<!-- header-logos END -->
+
+<!-- hero -->
+<div class="bloc tc-onyx b-parallax l-bloc" id="hero">
+	<div class="parallax bg-ISS-46-Glittering-lights-of-the-American-Midwest-iss bgc-white-smoke">
+	</div>
+	<div class="container -sm bloc-md-sm -md">
+		<div class="row row-margin-bottom">
+			<div class="text-center text-lg-center text-md-center col-md-10 offset-md-1 offset-lg-0 col-lg-12">
+				<img src="img/blue-green-glow.png" class="img-fluid mx-auto d-block img-style" alt="blue green" />
+				<h1 class="mg-md text-center btn-resize-mode h1-style tc-white">
+					<strong>kcp</strong> –&nbsp;Simplifying building massively multi-tenant services. Together.
+				</h1>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- hero END -->
+
+<!-- bloc-3 -->
+<div class="bloc tc-outer-space l-bloc" id="bloc-3">
+	<div class="container bloc-md-lg">
+		<div class="row">
+			<div class="col">
+				<h2 class="mg-md text-lg-center h2-style tc-onyx btn-resize-mode float-md-none text-md-center text-sm-center">
+					An OpenSource horizontally scalable Kubernetes-like Control Plane.
+				</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 text-center">
+				<span class="fa fa-star icon-md icon-round kcp-star-icon "></span>
+				<h3 class="mg-md tc-outer-space h3-style">
+					<strong>Isolation through Workspaces</strong>
+				</h3>
+				<p class="p-style">
+					A large number of independent, fully-isolated “logical clusters” known as workspaces.
+				</p>
+			</div>
+			<div class="col-md-4 text-center bloc-margin-top">
+				<span class="fa fa-star icon-round icon-md kcp-star-icon "></span>
+				<h3 class="mg-md tc-outer-space h3-style">
+					<strong>Massively multi-tenant API services</strong>
+				</h3>
+				<p class="p-style">
+					Enabling API service providers to offer Kubernetes-native APIs centrally using multi-tenant operators.
+				</p>
+			</div>
+			<div class="col-md-4 text-center">
+				<span class="fa fa-star icon-round icon-md kcp-star-icon "></span>
+				<h3 class="mg-md tc-outer-space h3-style">
+					<strong>SaaS-like API Consumption</strong>
+				</h3>
+				<p class="p-style">
+					Easy API consumption for users in their workspaces in a SaaS-like fashion.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- bloc-3 END -->
+
+<!-- timeline-header -->
+<div class="bloc tc-white-smoke bgc-true-blue d-bloc" id="timeline-header">
+	<div class="container bloc-sm-lg bloc-sm-md bloc-sm-sm bloc-sm">
+		<div class="row">
+			<div class="text-center col-lg-8 offset-lg-2 text-lg-center text-md-center col-md-10 offset-md-1">
+				<h2 class="mg-md tc-white h2-margin-bottom">
+					Our Goals
+				</h2>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- timeline-header END -->
+
+<!-- timeline -->
+<div class="bloc l-bloc" id="timeline">
+	<div class="container bloc-md bloc-no-padding-sm">
+		<div class="row row-padding-bottom">
+			<div class="text-md-start col text-lg-start align-self-center">
+				<p class="tc-onyx freedom-time-date text-lg-end text-md-end mg-clear scroll-fx-left-in-fade text-center mg-md-xs mg-clear-md text-sm-end">
+					Kubernetes at its Core. <br>No fork. No fragmentation.<br>
+				</p>
+			</div>
+			<div class="text-lg-center col-1 order-md-0 col-lg-1 d-sm-block d-none">
+				<div class="container-div-padding-bottom">
+					<img src="img/blue-triangle.png" class="img-fluid img-blue-triang-style kcp-triangle mx-auto d-block" alt="blue triangle" />
+				</div>
+				<div class="freedom-time-line container-div-padding-top">
+					<p class="text-center freedom-time-point mg-clear scroll-fx-down-in">
+						●
+					</p>
+				</div>
+			</div>
+			<div class="col freedom-time-cotent scroll-fx-in-fade">
+				<img src="img/Kubernetes_logo_without_workmark.svg" class="img-fluid mx-auto d-block mg-md img-timeline-style" alt="coffee%20banner" />
+				<h5 class="tc-onyx mg-lg mg-clear-sm text-center h5-style">
+					kcp takes full advantage of Kubernetes-style APIs, the glue that binds the cloud-native technology ecosystem together and imbues Kubernetes popular end-user experience, but kcp has unbound it from Kubernetes workload orchestration and clusters.<br><br>One rule that is set in stone:<br><br>kcp exposes 100% pure Kubernetes APIs by using the latest Kubernetes releases as the basis.<br><br>We live and breath Kubernetes and the community. No compromises.<br>
+				</h5>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col freedom-time-cotent scroll-fx-in-fade order-2 order-sm-0">
+				<img src="img/notebook.png" class="img-fluid mx-auto d-block mg-md " alt="coffee%20banner" />
+				<h5 class="tc-onyx mg-lg mg-clear-sm text-center h5-style">
+					kcp implements fully-isolated workspaces, each acting as its own Kubernetes-like cluster, with its own URL, its own set of APIs (e.g. different CRDs), its own RBAC, but as cheap and quick as a namespace
+				</h5>
+			</div>
+			<div class="text-lg-center order-md-0 col-lg-1 d-sm-block d-none col-1">
+				<div class="freedom-time-line">
+					<p class="text-center freedom-time-point mg-clear scroll-fx-down-in">
+						●
+					</p>
+				</div>
+			</div>
+			<div class="text-md-start col text-lg-start align-self-center order-1">
+				<p class="tc-onyx freedom-time-date mg-clear scroll-fx-right-in-fade text-center mg-md-xs text-lg-start text-md-start text-sm-start">
+					Massive Multi-Tenancy
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="text-md-start col text-lg-start align-self-center">
+				<p class="tc-onyx freedom-time-date text-lg-end text-md-end mg-clear scroll-fx-left-in-fade mg-md-xs text-center text-sm-end">
+					APIs as a Service
+				</p>
+			</div>
+			<div class="text-lg-center col-1 order-md-0 col-lg-1 d-sm-block d-none">
+				<div id="asciinema-apis-as-a-service" class="modal fade" tabindex="-1" role="dialog">
+					<div class="modal-dialog modal-fill modal-dialog-centered" role="document">
+						<div class="bgc-3964 freedom-modal modal-content">
+							<div >
+								<script src="https://asciinema.org/a/14.js" id="asciicast-14" async="" data-autoplay="true" data-size="big" data-fit="both"></script>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="freedom-time-line">
+						<p class="text-center freedom-time-point mg-clear scroll-fx-down-in">
+							●
+						</p>
+					</div>
+			</div>
+			<div class="col freedom-time-cotent scroll-fx-in-fade">
+					<div class="kcp-asciicinema-div text-lg-start">
+						<div class="text-center kcp-play-button">
+							<a href="#" data-bs-toggle="modal" data-bs-target="#asciinema-apis-as-a-service"><span class="icon-white-smoke fa fa-play-circle icon-xl"></span></a>
+						</div><a href="#" data-bs-toggle="modal" data-bs-target="#asciinema-apis-as-a-service" id="asciinemo-apis-as-a-service"><img src="img/notebook.png" class="img-fluid mx-auto d-block mg-md" alt="notebook" /></a>
+					</div>
+					<h4 class="tc-onyx mg-lg mg-clear-sm text-center h5-style">
+						kcp extends Kube&rsquo;s CRD extension model to an API export mechanism optimized for SaaS service providers offering APIs to thousands or many tens of thousands of user workspaces. Securely and efficiently.
+					</h4>
+				</div>
+		</div>
+		<div class="row">
+				<div class="col freedom-time-cotent scroll-fx-in-fade order-2 order-sm-0">
+					<img src="img/kcp-kube-love.svg" class="img-fluid mx-auto d-block mg-md" alt="coffee%20banner" />
+					<h4 class="tc-onyx mg-lg mg-clear-sm text-center h5-style">
+						kcp does not replace Kubernetes, but complements it.<br><br>As a global control plane to inter-connect Kubernetes clusters.<br> <br>As a backend to host Kubernetes APIs as SaaS to any Kubernetes on any platform and any cloud provider, natively.<br><br>
+					</h4>
+				</div>
+				<div class="text-lg-center col-1 order-md-0 col-lg-1 d-sm-block d-none">
+					<div class="freedom-time-line">
+						<p class="text-center freedom-time-point mg-clear scroll-fx-down-in">
+							●
+						</p>
+					</div>
+				</div>
+				<div class="text-md-start col text-lg-start align-self-center order-1">
+					<p class="tc-onyx freedom-time-date mg-clear scroll-fx-right-in-fade text-center mg-md-xs text-sm-start">
+						Open – no walled Garden
+					</p>
+				</div>
+			</div>
+		<div class="row">
+				<div class="text-md-start col text-lg-start align-self-center">
+					<p class="tc-onyx freedom-time-date text-lg-end text-md-end text-sm-end mg-clear scroll-fx-left-in-fade mg-md-xs text-center">
+						Horizontally Scalable
+					</p>
+				</div>
+				<div class="text-lg-center col-1 order-md-0 col-lg-1 d-sm-block d-none">
+					<div class="freedom-time-line">
+						<p class="text-center freedom-time-point mg-clear scroll-fx-down-in">
+							●
+						</p>
+					</div>
+				</div>
+				<div class="col freedom-time-cotent scroll-fx-in-fade">
+					<img src="img/horizontally%20scalable.svg" class="img-fluid mx-auto d-block mg-md" alt="coffee%20banner" />
+					<h4 class="tc-onyx mg-lg mg-clear-sm text-center h5-style">
+						kcp schedules workspaces to shared apiservers (the shards), similarly to pods scheduled to nodes and containers on a node sharing a Linux kernel. Our ambitions are to eventually reach 1 million workspaces and 10,000 shards.<br>
+					</h4>
+				</div>
+			</div>
+		<div class="row">
+				<div class="col freedom-time-cotent scroll-fx-in-fade order-2 order-sm-0">
+					<img src="img/workloads.svg" class="img-fluid mx-auto d-block mg-md" alt="coffee%20banner" />
+					<h4 class="tc-onyx mg-lg mg-clear-sm text-center h5-style h5-style-last">
+						kcp intentionally only knows generic APIs, no pods or related resources. Transparent-multi-cluster is a kcp sub-project to re-add many of Kube&rsquo;s workload APIs, but reshaped to offer shared compute capacity making users forget about clusters and nodes.
+					</h4>
+				</div>
+				<div class="text-lg-center col-1 order-md-0 col-lg-1 d-sm-block d-none">
+					<div class="freedom-time-line">
+						<p class="text-center freedom-time-point mg-clear scroll-fx-down-in">
+							●
+						</p>
+					</div>
+				</div>
+				<div class="text-md-start col text-lg-start align-self-center order-1">
+					<p class="tc-onyx freedom-time-date mg-clear scroll-fx-right-in-fade text-center mg-md-xs text-sm-start">
+						Compute – Where are the pods?
+					</p>
+				</div>
+			</div>
+	</div>
+</div>
+<!-- timeline END -->
+
+<!-- collaboration -->
+<div class="bloc bgc-true-blue" id="collaboration">
+	<div class="container bloc-lg-md bloc-md bloc-lg-sm bloc-md-lg">
+		<div class="row">
+			<div class="col-12">
+			</div>
+		</div>
+	</div>
+</div>
+<!-- collaboration END -->
+
+<!-- contribute -->
+<div class="bloc" id="contribute">
+	<div class="container bloc-lg-md bloc-md bloc-lg-sm bloc-md-lg">
+		<div class="row">
+			<div class="text-center text-lg-center text-md-center col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+				<h2 class="text-center mg-md tc-onyx">
+					We love collaboration&nbsp;
+				</h2>
+				<div class="text-center">
+					<span class="fa fa-heart none icon-red icon-xl"></span>
+				</div>
+				<h5 class="text-center mg-md tc-onyx-2">
+					We develop kcp completely in the open. Everybody is welcome to help making the vision of kcp reality.
+				</h5>
+			</div>
+		</div>
+		<div class="row">
+			<div class="text-center text-lg-center text-md-center col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+				<h5 class="text-center mg-md tc-onyx-2 kcp-contribute-text">
+					Meet us in person in the <a class="ltc-azure" href="https://kubernetes.slack.com/archives/C021U8WSAFK">#kcp-dev</a> channel in Kubernetes Slack. Find our&nbsp;<a class="ltc-azure" href="https://github.com/kcp-dev/kcp">code at Github</a>.
+				</h5>
+				<div >
+					<a href="https://github.com/kcp-dev/kcp/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=kcp-dev/kcp&amp;columns=10&amp;max=100" width="100%">
+</a>
+					
+				</div>
+				<h5 class="text-center mg-md tc-onyx-2 kcp-contribute-text-bottom">
+						We have a weekly <span class="kcp-community-meeting">community meeting: every Tuesday 11am EST</span>. Join us live! The <a class="ltc-azure" href="https://github.com/kcp-dev/kcp/issues?q=is%3Aopen+is%3Aissue+label%3Acommunity-meeting">agenda is available as Github issue</a> shortly before the meeting. See the <a class="ltc-azure" href="https://www.youtube.com/channel/UCfP_yS5uYix0ppSbm2ltS5Q">recordings on Youtube</a>.
+					</h5>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- contribute END -->
+
+<!-- ScrollToTop Button -->
+<a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1',this)"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 32 32"><path class="scroll-to-top-btn-icon" d="M30,22.656l-14-13-14,13"/></svg></a>
+<!-- ScrollToTop Button END-->
+
+
+<!-- bloc-7 -->
+<div class="bloc bgc-black-2 d-bloc" id="bloc-7">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="col-md-3 col-sm-6 offset-lg-2 col-lg-4 text-lg-start">
+				<h4 class="mg-md text-center tc-white-2 text-sm-start text-lg-center">
+					About
+				</h4>
+				<p class="text-center mg-clear text-lg-center">
+					Copyright © 2022 <a class="ltc-white" href="https://github.com/kcp-dev/kcp" target="_blank">The KCP Authors</a>
+				</p>
+			</div>
+			<div class="col-md-3 col-sm-6 col-lg-4 text-lg-start">
+				<div><div id="page-transition-anim" class="page-transition page-trans-up" style="background-color: rgb(0, 0, 0); animation-duration: 1s; animation-delay: 0.5s;">
+</div>
+				</div>
+				<h4 class="mg-md text-center tc-white-2 text-sm-start text-lg-center">
+						Connect
+					</h4>
+				<div class="text-lg-center text-center kcp-connect-div">
+						<div class="kcp-connect-lists">
+							<a href="github.com/kcp-dev/kcp"><span class="fab fa-github float-lg-none kcp-connect-icon icon-md"></span></a>
+						</div>
+						<div class="kcp-connect-lists">
+							<a href="https://twitter.com/kcp"><span class="fab fa-twitter kcp-connect-icon icon-md"></span></a>
+						</div>
+						<div class="kcp-connect-lists">
+							<a href="https://www.youtube.com/channel/UCfP_yS5uYix0ppSbm2ltS5Q"><span class="fab fa-youtube kcp-connect-icon icon-md"></span></a>
+						</div>
+						<div class="kcp-connect-lists">
+							<a href="https://groups.google.com/g/kcp-users"><span class="fa fa-mail-bulk kcp-connect-icon icon-md"></span></a>
+							<p class="text-lg-center">
+								user
+							</p>
+						</div>
+						<div class="kcp-connect-lists">
+							<a href="https://groups.google.com/g/kcp-dev"><span class="fa fa-mail-bulk kcp-connect-icon icon-md"></span></a>
+							<p class="text-lg-center">
+								dev
+							</p>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- bloc-7 END -->
+
+</div>
+<!-- Main container END -->
+    
+
+
+<!-- Additional JS -->
+<script src="./js/all.js?9044"></script><!-- Additional JS END -->
+<script>
+$('.freedom-more-button').on('click', function(){ $('body').toggleClass('freedom-no-scroll');
+});
+
+$('.freedom-close-button').on('click', function(){ $('body').removeClass('freedom-no-scroll');
+});
+</script>
+
+</body>
+</html>
