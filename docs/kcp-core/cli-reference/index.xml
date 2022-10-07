@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>kcp – a Kubernetes-like multi-tenant control plane – CLI Reference</title><link>http://kcp-dev.github.io/docs/kcp-core/cli-reference/</link><description>Recent content in CLI Reference on kcp – a Kubernetes-like multi-tenant control plane</description><generator>Hugo -- gohugo.io</generator><atom:link href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: kcp</title><link>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>kcp – a Kubernetes-like multi-tenant control plane – CLI Reference</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/</link><description>Recent content in CLI Reference on kcp – a Kubernetes-like multi-tenant control plane</description><generator>Hugo -- gohugo.io</generator><atom:link href="http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: kcp</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp/</guid><description>
 &lt;h3 id="synopsis">Synopsis&lt;/h3>
 &lt;p>KCP is the easiest way to manage Kubernetes applications against one or more clusters, by giving you a personal control plane that schedules your workloads onto one or many clusters, and making it simple to pick up and move. Advanced use cases including spreading your apps across clusters for resiliency, scheduling batch workloads onto clusters with free capacity, and enabling collaboration for individual teams without having access to the underlying clusters.&lt;/p>
 &lt;p>This command provides KCP specific sub-command for kubectl.&lt;/p>
@@ -19,10 +19,10 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>vmodule moduleSpec comma&lt;span style="color:#f92672">-&lt;/span>separated list of pattern&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#a6e22e">N&lt;/span> settings &lt;span style="color:#66d9ef">for&lt;/span> file&lt;span style="color:#f92672">-&lt;/span>filtered logging
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
 &lt;ul>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_crd/">kcp crd&lt;/a> - CRD related operations&lt;/li>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload/">kcp workload&lt;/a> - Manages KCP sync targets&lt;/li>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace/">kcp workspace&lt;/a> - Manages KCP workspaces&lt;/li>
-&lt;/ul></description></item><item><title>Docs: kcp crd</title><link>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_crd/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_crd/</guid><description>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_crd/">kcp crd&lt;/a> - CRD related operations&lt;/li>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload/">kcp workload&lt;/a> - Manages KCP sync targets&lt;/li>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace/">kcp workspace&lt;/a> - Manages KCP workspaces&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp crd</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_crd/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_crd/</guid><description>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp crd [flags]
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options">Options&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span> -h, --help help for crd
@@ -42,9 +42,9 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>vmodule moduleSpec comma&lt;span style="color:#f92672">-&lt;/span>separated list of pattern&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#a6e22e">N&lt;/span> settings &lt;span style="color:#66d9ef">for&lt;/span> file&lt;span style="color:#f92672">-&lt;/span>filtered logging
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
 &lt;ul>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp/">kcp&lt;/a> - kubectl plugin for KCP&lt;/li>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_crd_snapshot/">kcp crd snapshot&lt;/a> - Snapshot a CRD and convert it to an APIResourceSchema&lt;/li>
-&lt;/ul></description></item><item><title>Docs: kcp crd snapshot</title><link>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_crd_snapshot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_crd_snapshot/</guid><description>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp/">kcp&lt;/a> - kubectl plugin for KCP&lt;/li>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_crd_snapshot/">kcp crd snapshot&lt;/a> - Snapshot a CRD and convert it to an APIResourceSchema&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp crd snapshot</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_crd_snapshot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_crd_snapshot/</guid><description>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp crd snapshot -f FILE --prefix PREFIX [flags]
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="examples">Examples&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>
@@ -75,8 +75,8 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>vmodule moduleSpec comma&lt;span style="color:#f92672">-&lt;/span>separated list of pattern&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#a6e22e">N&lt;/span> settings &lt;span style="color:#66d9ef">for&lt;/span> file&lt;span style="color:#f92672">-&lt;/span>filtered logging
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
 &lt;ul>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_crd/">kcp crd&lt;/a> - CRD related operations&lt;/li>
-&lt;/ul></description></item><item><title>Docs: kcp workload</title><link>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload/</guid><description>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_crd/">kcp crd&lt;/a> - CRD related operations&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp workload</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload/</guid><description>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workload [flags]
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options">Options&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span> -h, --help help for workload
@@ -96,12 +96,12 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>vmodule moduleSpec comma&lt;span style="color:#f92672">-&lt;/span>separated list of pattern&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#a6e22e">N&lt;/span> settings &lt;span style="color:#66d9ef">for&lt;/span> file&lt;span style="color:#f92672">-&lt;/span>filtered logging
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
 &lt;ul>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp/">kcp&lt;/a> - kubectl plugin for KCP&lt;/li>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload_cordon/">kcp workload cordon&lt;/a> - Mark sync target as unschedulable&lt;/li>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload_drain/">kcp workload drain&lt;/a> - Start draining sync target in preparation for maintenance&lt;/li>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload_sync/">kcp workload sync&lt;/a> - Create a synctarget in kcp with service account and RBAC permissions. Output a manifest to deploy a syncer for the given sync target in a physical cluster.&lt;/li>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload_uncordon/">kcp workload uncordon&lt;/a> - Mark sync target as schedulable&lt;/li>
-&lt;/ul></description></item><item><title>Docs: kcp workload cordon</title><link>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload_cordon/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload_cordon/</guid><description>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp/">kcp&lt;/a> - kubectl plugin for KCP&lt;/li>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload_cordon/">kcp workload cordon&lt;/a> - Mark sync target as unschedulable&lt;/li>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload_drain/">kcp workload drain&lt;/a> - Start draining sync target in preparation for maintenance&lt;/li>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload_sync/">kcp workload sync&lt;/a> - Create a synctarget in kcp with service account and RBAC permissions. Output a manifest to deploy a syncer for the given sync target in a physical cluster.&lt;/li>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload_uncordon/">kcp workload uncordon&lt;/a> - Mark sync target as schedulable&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp workload cordon</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload_cordon/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload_cordon/</guid><description>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workload cordon &amp;lt;sync-target-name&amp;gt; [flags]
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="examples">Examples&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>
@@ -138,8 +138,8 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>vmodule moduleSpec comma&lt;span style="color:#f92672">-&lt;/span>separated list of pattern&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#a6e22e">N&lt;/span> settings &lt;span style="color:#66d9ef">for&lt;/span> file&lt;span style="color:#f92672">-&lt;/span>filtered logging
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
 &lt;ul>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload/">kcp workload&lt;/a> - Manages KCP sync targets&lt;/li>
-&lt;/ul></description></item><item><title>Docs: kcp workload drain</title><link>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload_drain/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload_drain/</guid><description>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload/">kcp workload&lt;/a> - Manages KCP sync targets&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp workload drain</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload_drain/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload_drain/</guid><description>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workload drain &amp;lt;sync-target-name&amp;gt; [flags]
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="examples">Examples&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>
@@ -176,8 +176,8 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>vmodule moduleSpec comma&lt;span style="color:#f92672">-&lt;/span>separated list of pattern&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#a6e22e">N&lt;/span> settings &lt;span style="color:#66d9ef">for&lt;/span> file&lt;span style="color:#f92672">-&lt;/span>filtered logging
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
 &lt;ul>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload/">kcp workload&lt;/a> - Manages KCP sync targets&lt;/li>
-&lt;/ul></description></item><item><title>Docs: kcp workload sync</title><link>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload_sync/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload_sync/</guid><description>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload/">kcp workload&lt;/a> - Manages KCP sync targets&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp workload sync</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload_sync/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload_sync/</guid><description>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workload sync &amp;lt;sync-target-name&amp;gt; --syncer-image &amp;lt;kcp-syncer-image&amp;gt; [--resources=&amp;lt;resource1&amp;gt;,&amp;lt;resource2&amp;gt;..] -o &amp;lt;output-file&amp;gt; [flags]
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="examples">Examples&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>
@@ -236,8 +236,8 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>vmodule moduleSpec comma&lt;span style="color:#f92672">-&lt;/span>separated list of pattern&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#a6e22e">N&lt;/span> settings &lt;span style="color:#66d9ef">for&lt;/span> file&lt;span style="color:#f92672">-&lt;/span>filtered logging
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
 &lt;ul>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload/">kcp workload&lt;/a> - Manages KCP sync targets&lt;/li>
-&lt;/ul></description></item><item><title>Docs: kcp workload uncordon</title><link>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload_uncordon/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload_uncordon/</guid><description>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload/">kcp workload&lt;/a> - Manages KCP sync targets&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp workload uncordon</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload_uncordon/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload_uncordon/</guid><description>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workload uncordon &amp;lt;sync-target-name&amp;gt; [flags]
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="examples">Examples&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>
@@ -274,8 +274,8 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>vmodule moduleSpec comma&lt;span style="color:#f92672">-&lt;/span>separated list of pattern&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#a6e22e">N&lt;/span> settings &lt;span style="color:#66d9ef">for&lt;/span> file&lt;span style="color:#f92672">-&lt;/span>filtered logging
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
 &lt;ul>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload/">kcp workload&lt;/a> - Manages KCP sync targets&lt;/li>
-&lt;/ul></description></item><item><title>Docs: kcp workspace</title><link>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace/</guid><description>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workload/">kcp workload&lt;/a> - Manages KCP sync targets&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp workspace</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace/</guid><description>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workspace [create|create-context|use|current|&amp;lt;workspace&amp;gt;|..|.|-|~|&amp;lt;root:absolute:workspace&amp;gt;] [flags]
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="examples">Examples&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>
@@ -343,13 +343,13 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">--&lt;/span>vmodule moduleSpec comma&lt;span style="color:#f92672">-&lt;/span>separated list of pattern&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#a6e22e">N&lt;/span> settings &lt;span style="color:#66d9ef">for&lt;/span> file&lt;span style="color:#f92672">-&lt;/span>filtered logging
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
 &lt;ul>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp/">kcp&lt;/a> - kubectl plugin for KCP&lt;/li>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_create/">kcp workspace create&lt;/a> - Creates a new workspace&lt;/li>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_create-context/">kcp workspace create-context&lt;/a> - Create a kubeconfig context for the current workspace&lt;/li>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_current/">kcp workspace current&lt;/a> - Print the current workspace. Same as &amp;lsquo;kubectl ws .&amp;rsquo;.&lt;/li>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_tree/">kcp workspace tree&lt;/a> - Print the current workspace tree.&lt;/li>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_use/">kcp workspace use&lt;/a> - Uses the given workspace as the current workspace. Using - means previous workspace, .. means parent workspace, . mean current, ~ means home workspace&lt;/li>
-&lt;/ul></description></item><item><title>Docs: kcp workspace create</title><link>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_create/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_create/</guid><description>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp/">kcp&lt;/a> - kubectl plugin for KCP&lt;/li>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_create/">kcp workspace create&lt;/a> - Creates a new workspace&lt;/li>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_create-context/">kcp workspace create-context&lt;/a> - Create a kubeconfig context for the current workspace&lt;/li>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_current/">kcp workspace current&lt;/a> - Print the current workspace. Same as &amp;lsquo;kubectl ws .&amp;rsquo;.&lt;/li>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_tree/">kcp workspace tree&lt;/a> - Print the current workspace tree.&lt;/li>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_use/">kcp workspace use&lt;/a> - Uses the given workspace as the current workspace. Using - means previous workspace, .. means parent workspace, . mean current, ~ means home workspace&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp workspace create</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_create/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_create/</guid><description>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workspace create [flags]
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="examples">Examples&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workspace create &amp;lt;workspace name&amp;gt; [--type=&amp;lt;type&amp;gt;] [--enter [--ignore-not-ready]] --ignore-existing
@@ -387,8 +387,8 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --vmodule moduleSpec comma-separated list of pattern=N settings for file-filtered logging
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
 &lt;ul>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace/">kcp workspace&lt;/a> - Manages KCP workspaces&lt;/li>
-&lt;/ul></description></item><item><title>Docs: kcp workspace create-context</title><link>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_create-context/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_create-context/</guid><description>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace/">kcp workspace&lt;/a> - Manages KCP workspaces&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp workspace create-context</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_create-context/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_create-context/</guid><description>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workspace create-context [&amp;lt;context-name&amp;gt;] [--overwrite] [flags]
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="examples">Examples&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workspace create-context
@@ -424,8 +424,8 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --vmodule moduleSpec comma-separated list of pattern=N settings for file-filtered logging
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
 &lt;ul>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace/">kcp workspace&lt;/a> - Manages KCP workspaces&lt;/li>
-&lt;/ul></description></item><item><title>Docs: kcp workspace current</title><link>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_current/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_current/</guid><description>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace/">kcp workspace&lt;/a> - Manages KCP workspaces&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp workspace current</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_current/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_current/</guid><description>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workspace current [--short] [flags]
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="examples">Examples&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workspace current
@@ -461,8 +461,8 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --vmodule moduleSpec comma-separated list of pattern=N settings for file-filtered logging
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
 &lt;ul>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace/">kcp workspace&lt;/a> - Manages KCP workspaces&lt;/li>
-&lt;/ul></description></item><item><title>Docs: kcp workspace tree</title><link>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_tree/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_tree/</guid><description>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace/">kcp workspace&lt;/a> - Manages KCP workspaces&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp workspace tree</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_tree/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_tree/</guid><description>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workspace tree [flags]
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="examples">Examples&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workspace tree
@@ -498,8 +498,8 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --vmodule moduleSpec comma-separated list of pattern=N settings for file-filtered logging
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
 &lt;ul>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace/">kcp workspace&lt;/a> - Manages KCP workspaces&lt;/li>
-&lt;/ul></description></item><item><title>Docs: kcp workspace use</title><link>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_use/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_use/</guid><description>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace/">kcp workspace&lt;/a> - Manages KCP workspaces&lt;/li>
+&lt;/ul></description></item><item><title>Docs: kcp workspace use</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_use/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace_use/</guid><description>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>kcp workspace use &amp;lt;workspace&amp;gt;|..|.|-|~|&amp;lt;root:absolute:workspace&amp;gt; [flags]
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="options">Options&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span> -h, --help help for use
@@ -533,5 +533,5 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --vmodule moduleSpec comma-separated list of pattern=N settings for file-filtered logging
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="see-also">SEE ALSO&lt;/h3>
 &lt;ul>
-&lt;li>&lt;a href="http://kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace/">kcp workspace&lt;/a> - Manages KCP workspaces&lt;/li>
+&lt;li>&lt;a href="http://avinal.space/kcp-dev.github.io/kcp-dev.github.io/docs/kcp-core/cli-reference/kcp_workspace/">kcp workspace&lt;/a> - Manages KCP workspaces&lt;/li>
 &lt;/ul></description></item></channel></rss>

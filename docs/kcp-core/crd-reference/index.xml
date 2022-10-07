@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>kcp – a Kubernetes-like multi-tenant control plane – CRD Reference</title><link>http://kcp-dev.github.io/docs/kcp-core/crd-reference/</link><description>Recent content in CRD Reference on kcp – a Kubernetes-like multi-tenant control plane</description><generator>Hugo -- gohugo.io</generator><atom:link href="http://kcp-dev.github.io/docs/kcp-core/crd-reference/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: APIBinding CRD schema reference (group apis.kcp.dev)</title><link>http://kcp-dev.github.io/docs/kcp-core/crd-reference/apibindings.apis.kcp.dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/crd-reference/apibindings.apis.kcp.dev/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>kcp – a Kubernetes-like multi-tenant control plane – CRD Reference</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/</link><description>Recent content in CRD Reference on kcp – a Kubernetes-like multi-tenant control plane</description><generator>Hugo -- gohugo.io</generator><atom:link href="http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: APIBinding CRD schema reference (group apis.kcp.dev)</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/apibindings.apis.kcp.dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/apibindings.apis.kcp.dev/</guid><description>
 &lt;h2 id="apibinding">APIBinding&lt;/h2>
 &lt;dl class="crd-meta">
 &lt;dt class="fullname">Full name:&lt;/dt>
@@ -651,7 +651,7 @@ Versions may not be removed while they exist in this list.&lt;/p>
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;/div></description></item><item><title>Docs: APIExport CRD schema reference (group apis.kcp.dev)</title><link>http://kcp-dev.github.io/docs/kcp-core/crd-reference/apiexports.apis.kcp.dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/crd-reference/apiexports.apis.kcp.dev/</guid><description>
+&lt;/div></description></item><item><title>Docs: APIExport CRD schema reference (group apis.kcp.dev)</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/apiexports.apis.kcp.dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/apiexports.apis.kcp.dev/</guid><description>
 &lt;h2 id="apiexport">APIExport&lt;/h2>
 &lt;dl class="crd-meta">
 &lt;dt class="fullname">Full name:&lt;/dt>
@@ -1067,7 +1067,7 @@ PermissionClaims overlapping with the APIExport resources are ignored.&lt;/p>
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;/div></description></item><item><title>Docs: APIResourceImport CRD schema reference (group apiresource.kcp.dev)</title><link>http://kcp-dev.github.io/docs/kcp-core/crd-reference/apiresourceimports.apiresource.kcp.dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/crd-reference/apiresourceimports.apiresource.kcp.dev/</guid><description>
+&lt;/div></description></item><item><title>Docs: APIResourceImport CRD schema reference (group apiresource.kcp.dev)</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/apiresourceimports.apiresource.kcp.dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/apiresourceimports.apiresource.kcp.dev/</guid><description>
 &lt;h2 id="apiresourceimport">APIResourceImport&lt;/h2>
 &lt;dl class="crd-meta">
 &lt;dt class="fullname">Full name:&lt;/dt>
@@ -1554,7 +1554,7 @@ PermissionClaims overlapping with the APIExport resources are ignored.&lt;/p>
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;/div></description></item><item><title>Docs: APIResourceSchema CRD schema reference (group apis.kcp.dev)</title><link>http://kcp-dev.github.io/docs/kcp-core/crd-reference/apiresourceschemas.apis.kcp.dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/crd-reference/apiresourceschemas.apis.kcp.dev/</guid><description>
+&lt;/div></description></item><item><title>Docs: APIResourceSchema CRD schema reference (group apis.kcp.dev)</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/apiresourceschemas.apis.kcp.dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/apiresourceschemas.apis.kcp.dev/</guid><description>
 &lt;h2 id="apiresourceschema">APIResourceSchema&lt;/h2>
 &lt;dl class="crd-meta">
 &lt;dt class="fullname">Full name:&lt;/dt>
@@ -2061,7 +2061,7 @@ Note: the OpenAPI v3 schemas must be equal for all versions until CEL version mi
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;/div></description></item><item><title>Docs: ClusterWorkspace CRD schema reference (group tenancy.kcp.dev)</title><link>http://kcp-dev.github.io/docs/kcp-core/crd-reference/clusterworkspaces.tenancy.kcp.dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/crd-reference/clusterworkspaces.tenancy.kcp.dev/</guid><description>
+&lt;/div></description></item><item><title>Docs: ClusterWorkspace CRD schema reference (group tenancy.kcp.dev)</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/clusterworkspaces.tenancy.kcp.dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/clusterworkspaces.tenancy.kcp.dev/</guid><description>
 &lt;h2 id="clusterworkspace">ClusterWorkspace&lt;/h2>
 &lt;dl class="crd-meta">
 &lt;dt class="fullname">Full name:&lt;/dt>
@@ -2533,7 +2533,7 @@ A cluster workspace in &amp;ldquo;Initializing&amp;rdquo; state are gated via th
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;/div></description></item><item><title>Docs: ClusterWorkspaceShard CRD schema reference (group tenancy.kcp.dev)</title><link>http://kcp-dev.github.io/docs/kcp-core/crd-reference/clusterworkspaceshards.tenancy.kcp.dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/crd-reference/clusterworkspaceshards.tenancy.kcp.dev/</guid><description>
+&lt;/div></description></item><item><title>Docs: ClusterWorkspaceShard CRD schema reference (group tenancy.kcp.dev)</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/clusterworkspaceshards.tenancy.kcp.dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/clusterworkspaceshards.tenancy.kcp.dev/</guid><description>
 &lt;h2 id="clusterworkspaceshard">ClusterWorkspaceShard&lt;/h2>
 &lt;dl class="crd-meta">
 &lt;dt class="fullname">Full name:&lt;/dt>
@@ -2779,7 +2779,7 @@ This will be defaulted to the shard&amp;rsquo;s base address if not specified.&l
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;/div></description></item><item><title>Docs: ClusterWorkspaceType CRD schema reference (group tenancy.kcp.dev)</title><link>http://kcp-dev.github.io/docs/kcp-core/crd-reference/clusterworkspacetypes.tenancy.kcp.dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/crd-reference/clusterworkspacetypes.tenancy.kcp.dev/</guid><description>
+&lt;/div></description></item><item><title>Docs: ClusterWorkspaceType CRD schema reference (group tenancy.kcp.dev)</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/clusterworkspacetypes.tenancy.kcp.dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/clusterworkspacetypes.tenancy.kcp.dev/</guid><description>
 &lt;h2 id="clusterworkspacetype">ClusterWorkspaceType&lt;/h2>
 &lt;dl class="crd-meta">
 &lt;dt class="fullname">Full name:&lt;/dt>
@@ -3306,7 +3306,7 @@ An empty list matches all types.&lt;/p>
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;/div></description></item><item><title>Docs: Location CRD schema reference (group scheduling.kcp.dev)</title><link>http://kcp-dev.github.io/docs/kcp-core/crd-reference/locations.scheduling.kcp.dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/crd-reference/locations.scheduling.kcp.dev/</guid><description>
+&lt;/div></description></item><item><title>Docs: Location CRD schema reference (group scheduling.kcp.dev)</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/locations.scheduling.kcp.dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/locations.scheduling.kcp.dev/</guid><description>
 &lt;h2 id="location">Location&lt;/h2>
 &lt;dl class="crd-meta">
 &lt;dt class="fullname">Full name:&lt;/dt>
@@ -3665,7 +3665,7 @@ Note that these labels are not what is shown in the Location objects to the user
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;/div></description></item><item><title>Docs: NegotiatedAPIResource CRD schema reference (group apiresource.kcp.dev)</title><link>http://kcp-dev.github.io/docs/kcp-core/crd-reference/negotiatedapiresources.apiresource.kcp.dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/crd-reference/negotiatedapiresources.apiresource.kcp.dev/</guid><description>
+&lt;/div></description></item><item><title>Docs: NegotiatedAPIResource CRD schema reference (group apiresource.kcp.dev)</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/negotiatedapiresources.apiresource.kcp.dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/negotiatedapiresources.apiresource.kcp.dev/</guid><description>
 &lt;h2 id="negotiatedapiresource">NegotiatedAPIResource&lt;/h2>
 &lt;dl class="crd-meta">
 &lt;dt class="fullname">Full name:&lt;/dt>
@@ -4135,7 +4135,7 @@ Note that these labels are not what is shown in the Location objects to the user
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;/div></description></item><item><title>Docs: Placement CRD schema reference (group scheduling.kcp.dev)</title><link>http://kcp-dev.github.io/docs/kcp-core/crd-reference/placements.scheduling.kcp.dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/crd-reference/placements.scheduling.kcp.dev/</guid><description>
+&lt;/div></description></item><item><title>Docs: Placement CRD schema reference (group scheduling.kcp.dev)</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/placements.scheduling.kcp.dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/placements.scheduling.kcp.dev/</guid><description>
 &lt;h2 id="placement">Placement&lt;/h2>
 &lt;dl class="crd-meta">
 &lt;dt class="fullname">Full name:&lt;/dt>
@@ -4658,7 +4658,7 @@ Note that these labels are not what is shown in the Location objects to the user
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;/div></description></item><item><title>Docs: SyncTarget CRD schema reference (group workload.kcp.dev)</title><link>http://kcp-dev.github.io/docs/kcp-core/crd-reference/synctargets.workload.kcp.dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/crd-reference/synctargets.workload.kcp.dev/</guid><description>
+&lt;/div></description></item><item><title>Docs: SyncTarget CRD schema reference (group workload.kcp.dev)</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/synctargets.workload.kcp.dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/synctargets.workload.kcp.dev/</guid><description>
 &lt;h2 id="synctarget">SyncTarget&lt;/h2>
 &lt;dl class="crd-meta">
 &lt;dt class="fullname">Full name:&lt;/dt>
@@ -5137,7 +5137,7 @@ Note that these labels are not what is shown in the Location objects to the user
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;/div></description></item><item><title>Docs: Workspace CRD schema reference (group tenancy.kcp.dev)</title><link>http://kcp-dev.github.io/docs/kcp-core/crd-reference/workspaces.tenancy.kcp.dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://kcp-dev.github.io/docs/kcp-core/crd-reference/workspaces.tenancy.kcp.dev/</guid><description>
+&lt;/div></description></item><item><title>Docs: Workspace CRD schema reference (group tenancy.kcp.dev)</title><link>http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/workspaces.tenancy.kcp.dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://avinal.space/kcp-dev.github.io/docs/kcp-core/crd-reference/workspaces.tenancy.kcp.dev/</guid><description>
 &lt;h2 id="workspace">Workspace&lt;/h2>
 &lt;dl class="crd-meta">
 &lt;dt class="fullname">Full name:&lt;/dt>
